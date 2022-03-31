@@ -1,0 +1,90 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+options:  # The options key will be applied to all chapters, but not sub-sections
+  numbered: True
+
+#- file: markdown
+#- file: notebooks
+#- file: markdown-notebooks
+parts:
+  - caption: KDP-2 
+    numbered: True  # Only applies to chapters in Part 1.
+    chapters:
+    - file: KDP-2_about
+    - file: KDP-2_setup_model
+      sections:
+      - file: KDP-2_setup_model_commands
+      - file: KDP-2_setup_model_example_python
+      - file: KDP-2_spot_diagram_matplotlib
+    - file: KDP-2_markdown
+      sections:
+      - file: KDP-2_operands_lens_data_base
+        #title: Lens database items
+      - file: KDP-2_operands_real_single_ray
+      - file: KDP-2_operands_special_ray
+      - file: KDP-2_operands_aberrations
+      - file: KDP-2_operands_parax_ray
+      - file: KDP-2_operands_paraxial_chromatic
+      - file: KDP-2_operands_spd_caf
+      - file: KDP-2_operands_spectrometer
+      - file: KDP-2_operands_real_ray_composite
+      - file: KDP-2_operands_Gaussian_beam
+    
+
+  - caption: OpTaliX 
+    numbered: True  # Only applies to chapters in Part 1.
+    chapters:
+    - file: OpTaliX_setup_model
+      sections:
+      - file: OpTaliX_setup_model_example_python
+    - file: OpTaliX_markdown
+      sections:
+      - file: OpTaliX_variables
+      - file: OpTaliX_LDI_config
+      - file: OpTaliX_LDI_surface
+      - file: OpTaliX_apertures
+      - file: OpTaliX_Geometric Analysis
+      - file: OpTaliX_optimization_operands
+      - file: OpTaliX_RayData
+      - file: OpTaliX_paraxial
+      - file: OpTaliX_polarization
+      - file: OpTaliX_Tolerance_sensitivity
+      - file: OpTaliX_Illuminantion_source_data
+      - file: OpTaliX_Gaussian_beam
+      - file: OpTaliX_fiber_data
+      - file: OpTaliX_Diffraction_analysis
+      - file: OpTaliX_arrays
+      - file: OpTaliX_miscellaneous
+  - caption: OSLO 
+    numbered: True  # Only applies to chapters in Part 1
+    chapters:
+    - file: OSLO_markdown
+      #sections:
+  - caption: ZEMAX 
+    numbered: True  # Only applies to chapters in Part 1
+    chapters:
+    - file: ZEMAX_markdown
+    - file: ZEMAX_links
+      #sections:
+  - caption: Code V 
+    numbered: True  # Only applies to chapters in Part 1
+    chapters:
+    - file: CodeV_markdown
+      #sections:
+  - caption: Synopsys 
+    numbered: True  # Only applies to chapters in Part 1
+    chapters:
+    - file: Synopsys_markdown
+      #sections:
+  - caption: Comparison
+    numbered: True  # Only applies to chapters in Part 1
+    chapters:
+    - file: Comparison_markdown
+  - caption: Optical Design Practice 
+    numbered: True  # Only applies to chapters in Part 1
+    chapters:
+    - file: OpticDesign_markdown
+      #sections:

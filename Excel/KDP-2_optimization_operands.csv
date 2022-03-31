@@ -1,0 +1,84 @@
+PREDEFINED LENS DATABASE OPERANDS;;;;
+OPERAND NAME;"""i"" ";"""j""";"""k""";DESCRIPTION
+;(nw#3);(nw#4);(nw#5);
+RD ;surf #;(not used);(not used);"Radius of curvature at surface ""i"""
+CV ;surf #;(not used);(not used);"Curvature at surface ""i"""
+TH ;surf #;(not used);(not used);"Thickness at surface ""i"""
+CC ;surf #;(not used);(not used);"Conic constant at surface ""i"""
+AC ;surf #;(not used);(not used);"2nd order aspheric at surface ""i"""
+AD;surf #;(not used);(not used);"4th order aspheric at surface ""i"""
+AE;surf #;(not used);(not used);"6th order aspheric at surface ""i"""
+AF;surf #;(not used);(not used);"8th order aspheric at surface ""i"""
+AG;surf #;(not used);(not used);"10th order aspheric at surface ""i"""
+AH;surf #;(not used);(not used);"12th order aspheric at surface ""i"""
+AI;surf #;(not used);(not used);"14th order aspheric at surface ""i"""
+AJ;surf #;(not used);(not used);"16th order aspheric at surface ""i"""
+AK;surf #;(not used);(not used);"18th order aspheric at surface ""i"""
+AL;surf #;(not used);(not used);"20th order aspheric at surface ""i"""
+RDTOR;surf #;(not used);(not used);"Toric radius of curvature at surface ""i"""
+CVTOR;surf #;(not used);(not used);"Toric curvature at surface ""i"""
+CCTOR;surf #;(not used);(not used);"Toric conic constant at surface ""i"""
+ADTOR;surf #;(not used);(not used);"Toric 4th order aspheric at surface ""i"""
+AETOR;surf #;(not used);(not used);"Toric 6th order aspheric at surface ""i"""
+AFTOR;surf #;(not used);(not used);"Toric 8th order aspheric at surface ""i"""
+AGTOR;surf #;(not used);(not used);"Toric 10th order aspheric at surface ""i"""
+ALPHA;surf #;(not used);(not used);"ALPHA surface tilt angle (degrees) at surface ""i"""
+BETA;surf #;(not used);(not used);"BETA surface tilt angle (degrees) at surface ""i"""
+GAMMA;surf #;(not used);(not used);"GAMMA surface tilt angle (degrees) at surface ""i"""
+VNUM;surf #;(not used);(not used);"V-number specifier for the ""MODEL"" glass at surface ""i"""
+;;;;
+DPART;surf#;(not used);(not used);"Partial Dispersion shift for the ""MODEL"" glass at surface ""i"". "
+ABBE;surf#;(not used);(not used);"V-number for the  glass at surface ""i"""
+;;;;It is equal to:
+;;;; 
+;;;;
+;;;;Where:
+;;;;pcw1 and pcw2 are the primary wavelength pair defined in the lens database.
+PARTL;surf #;(not used);(not used);"Partial Dispersion for the glass at surface ""i"". "
+;;;;It is equal to:
+;;;;
+;;;;Where:
+;;;;pcw1 and pcw2 are the primary wavelength pair defined in the lens database.
+INDEX;surf #;(not used);(not used);"Refractive index Nd or the ""MODEL"" glass at surface ""i""."
+N1 to N10;surf #;(not used);(not used);"Refractive index value at wavelengths #1 to #10 at surface ""i""."
+XD;surf #;(not used);(not used);"X-decenter at surface ""i"""
+YD;surf #;(not used);(not used);"Y-decenter at surface ""i"""
+ZD;surf #;(not used);(not used);"Z-decenter at surface ""i"""
+XVERT;surf #;Global ref surf #;(not used);"Global X-coordinate of the vertex of surface ""i"", referenced to a global origin at surface ""j""."
+YVERT;surf #;Global ref surf #;(not used);"Global Y-coordinate of the vertex of surface ""i"", referenced to a global origin at surface ""j""."
+ZVERT;surf #;Global ref surf #;(not used);"Global Z-coordinate of the vertex of surface ""i"", referenced to a global origin at surface ""j""."
+LXVERT;surf #;Global ref surf #;(not used);"Global X-direction cosine of the local X-axis of surface ""i"", referenced to a global origin at surface ""j""."
+MXVERT;surf #;Global ref surf #;(not used);"Global Y-direction cosine of the local X-axis of surface ""i"", referenced to a global origin at surface ""j""."
+NXVERT;surf #;Global ref surf #;(not used);"Global Z-direction cosine of the local X-axis of surface ""i"", referenced to a global origin at surface ""j""."
+LYVERT;surf #;Global ref surf #;(not used);"Global X-direction cosine of the local Y-axis of surface ""i"", referenced to a global origin at surface ""j""."
+MYVERT;surf #;Global ref surf #;(not used);"Global Y-direction cosine of the local Y-axis of surface ""i"", referenced to a global origin at surface ""j""."
+NYVERT;surf #;Global ref surf #;(not used);"Global Z-direction cosine of the local Y-axis of surface ""i"", referenced to a global origin at surface ""j""."
+LZVERT;surf #;Global ref surf #;(not used);"Global X-direction cosine of the local Z-axis of surface ""i"", referenced to a global origin at surface ""j""."
+MZVERT;surf #;Global ref surf #;(not used);"Global Y-direction cosine of the local Z-axis of surface ""i"", referenced to a global origin at surface ""j""."
+NZVERT;surf #;Global ref surf #;(not used);"Global Z-direction cosine of the local Z-axis of surface ""i"", referenced to a global origin at surface ""j""."
+LENGTH or OAL;surf #;surf #;(not used);"Algebraic sum of axial thicknesses from surface ""i"" to surface ""j"""
+;(def=0);(def=last);;
+MLENGTH or OPTLEN;surf #;surf #;(not used) ;"Physical length from surface ""i"" to surface ""j"" along a path connecting surface vertices and ignoring tilts and decentrations. This is the sum of the axial thicknesses multiplied by the refractive index in each space."
+;(def=0);(def=last);;
+ET or ETY;surf #;(not used);(not used);"Edge thickness from surface ""i"" to surface ""i""+1. Surface tilts and decentrations are ignored. If clear apertures are assigned, they are assumed circular with the YZ-plane value being used. The larger of the values on surface ""i"" and ""i""+1 is used. If no clear apertures are assigned, then the larger of the sums of PY+PCY on surfaces ""i"" and ""i""+1 are used in the calculation. Clear aperture decentrations and tilts are ignored."
+ETX;surf #;(not used);(not used);"Edge thickness from surface ""i"" to surface ""i""+1. Surface tilts and decentrations are ignored. If clear apertures are assigned, they are assumed circular with the XZ-plane value being used. The larger of the values on surface ""i"" and ""i""+1 is used. If no clear apertures are assigned, then the larger of the sums of PX+PCX on surfaces ""i"" and ""i""+1 are used in the calculation. Clear aperture decentrations and tilts are ignored."
+C1 through C96;surf #;(not used);(not used);"Any one of the 96 coefficients of a special surface attached to surface ""i"""
+SHAPEFAC;surf #;(not used);(not used);"This returns the shape factor for the lens element which begins at surface ""i"" and terminates at surface ""i+1"".  The shape factor is defined by :"
+;;;;
+;;;;where: r is the radius of curvature
+PIVX;surf #;(not used);(not used);"X-alternate pivot point at surface ""i"""
+PIVY;surf #;(not used);(not used);"Y-alternate pivot point at surface ""i"""
+PIVZ;surf #;(not used);(not used);"Z-alternate pivot point at surface ""I"""
+CLPX;surf #;(not used);(not used);"X-dimension of the clear aperture height at surface ""I"". Zero is returned if no clear aperture is assigned."
+CLPY;surf #;(not used);(not used);"Y-dimension of the clear aperture height at surface ""I"". Zero is returned if no clear aperture is assigned."
+GRS;surf#;(not used);(not used);diffraction grating spacing
+WEIGHT;surf #;surf #;(not used) ;"MASS in Kgs of elements from surface ""i"" to surface ""j"". This calculation assumes spherical surfaces and ignores all decenters and tilts. It uses the specific gravity assigned to surfaces with the lens database command ""SPGR""."
+;(def=0);(def=last);;
+COST;surf #;surf #;(not used) ;Cost in cost units based upon a WEIGHT calculation multiplied by the individual surface price/Kg values stored in the lens database.
+;(def=0);(def=last);;
+ACT;surf #;actuator #;(not used);"The actuator value between –1.0 and 1.0 for actuator ""j"" on surface ""i"" if surface ""i"" is defined as a deformable surface. "
+ACTMAX;surf #;(not used);(not used);"Returns the maximun actuator value on surface ""i"" if surface ""i"" is defined as a deformable surface. "
+ACTMIN;surf #;(not used);(not used);"Returns the minumum actuator value on surface ""i"" if surface ""i"" is defined as a deformable surface. "
+ACTMEAN;surf #;(not used);(not used);"Returns the average of all active actuator values on surface ""i"" if surface ""i"" is defined as a deformable surface. "
+ACTSDEV;surf #;(not used);(not used);"Returns the standard deviation from the mean of all active actuator values on surface ""i"" if surface ""i"" is defined as a deformable surface. "
+ACTPTOV;surf #;(not used);(not used);"Returns the peak to valley value for all active actuator values on surface ""i"" if surface ""i"" is defined as a deformable surface. "
