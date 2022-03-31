@@ -1,0 +1,879 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.2. Setup a Cooke triplet with python &#8212; OpticalDesignDocu</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.3. Create spot diagram and plot with python" href="KDP-2_spot_diagram_matplotlib.html" />
+    <link rel="prev" title="2.1. Commands" href="KDP-2_setup_model_commands.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">OpticalDesignDocu</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Optical Design Docu
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  KDP-2
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="KDP-2_about.html">
+   1. About KDP-2
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="KDP-2_setup_model.html">
+   2. Setup of Model
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_setup_model_commands.html">
+     2.1. Commands
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.2. Setup a Cooke triplet with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_spot_diagram_matplotlib.html">
+     2.3. Create spot diagram and plot with python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="KDP-2_markdown.html">
+   3. Operands
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_lens_data_base.html">
+     3.1. Lens database items
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_real_single_ray.html">
+     3.2. Real single ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_special_ray.html">
+     3.3. Special real / paraxial ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_aberrations.html">
+     3.4. Aberrations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_parax_ray.html">
+     3.5. Paraxial ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_paraxial_chromatic.html">
+     3.6. Paraxial chromatic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_spd_caf.html">
+     3.7. Spot diagram
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_spectrometer.html">
+     3.8. Spectrometer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_real_ray_composite.html">
+     3.9. Real ray composite
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_Gaussian_beam.html">
+     3.10. Gaussian beams
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  OpTaliX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="OpTaliX_markdown.html">
+   1. OpTaliX
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_variables.html">
+     1.1. OpTaliX: Optimization Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_LDI_config.html">
+     1.2. OpTaliX: Lens data item configurations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_LDI_surface.html">
+     1.3. OpTaliX: Lens data items surface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_apertures.html">
+     1.4. OpTaliX: Apertures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Geometric%20Analysis.html">
+     1.5. OpTaliX: Geometric Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_optimization_operands.html">
+     1.6. OpTaliX: Optimization Targets  / Constraints
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_RayData.html">
+     1.7. OpTaliX: Ray data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_paraxial.html">
+     1.8. OpTaliX: Lens data items paraxial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_polarization.html">
+     1.9. OpTaliX: Polarization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Tolerance_sensitivity.html">
+     1.10. OpTaliX: Tolerance and Sensitivity Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Illuminantion_source_data.html">
+     1.11. OpTaliX: Illumination source data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Gaussian_beam.html">
+     1.12. OpTaliX: Gaussian beam
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_fiber_data.html">
+     1.13. OpTaliX: Fiber data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Diffraction_analysis.html">
+     1.14. OpTaliX: Diffraction analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_arrays.html">
+     1.15. OpTaliX: Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_miscellaneous.html">
+     1.16. OpTaliX: Miscellaneous
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  OSLO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="OSLO_markdown.html">
+   1. OSLO
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ZEMAX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZEMAX_markdown.html">
+   1. ZEMAX
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Code V
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="CodeV_markdown.html">
+   1. Code V
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Synopsys
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Synopsys_markdown.html">
+   1. SYNOPSYS
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Comparison
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Comparison_markdown.html">
+   1. Comparison
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Optical Design Practice
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="OpticDesign_markdown.html">
+   1. Optical Design Links
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/KDP-2_setup_model_example_python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FKDP-2_setup_model_example_python.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/KDP-2_setup_model_example_python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup-of-the-optical-model">
+   2.2.1. Setup of the optical model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis">
+   2.2.2. Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization-with-predefined-operands">
+   2.2.3. Optimization with predefined operands:
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Setup a Cooke triplet with python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup-of-the-optical-model">
+   2.2.1. Setup of the optical model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis">
+   2.2.2. Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optimization-with-predefined-operands">
+   2.2.3. Optimization with predefined operands:
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="setup-a-cooke-triplet-with-python">
+<h1><span class="section-number">2.2. </span>Setup a Cooke triplet with python<a class="headerlink" href="#setup-a-cooke-triplet-with-python" title="Permalink to this headline">¶</a></h1>
+<p>The following python code creates a .DAT file which is a macro that can be executed within KDP-2 cli with the command “input file Cooke_triplet.dat”. This procedure is used for convenience in order to have a list of KDP-2 commands afterwards and to clearly separate between command syntax and text in this notebook. This example can also be found in the tutorial 1 of the KDP-2 manual. Once you have executed this notebook the file “Cooke_triplet.dat” will be located in the path “filename” (see below).</p>
+<p>At first a function is defined to write a string line into a file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">wl</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function for writing a line in a file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>   
+    <span class="n">file</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="setup-of-the-optical-model">
+<h2><span class="section-number">2.2.1. </span>Setup of the optical model<a class="headerlink" href="#setup-of-the-optical-model" title="Permalink to this headline">¶</a></h2>
+<p>Now the code to create the .dat file (with a sequence of KDP-2 commands) for the creation of an optical model of a Cooke triplet (as starting system) follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="n">filename</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Work\Tools\KDP\Cooke_triplet.DAT&quot;</span>      <span class="c1"># name of the .DAT file to be written using python</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
+    
+    <span class="n">lens_id</span> <span class="o">=</span> <span class="s1">&#39;Cooke triplet&#39;</span>    <span class="c1"># the name of the lens</span>
+    <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;MM&#39;</span>                        <span class="c1"># lens unit is mm</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;C This macro sets up a Cooke triplet&#39;</span><span class="p">])</span>     <span class="c1"># write our first commend</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;LENS&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;LI, &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">lens_id</span><span class="p">)])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;UNITS &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">units</span><span class="p">)])</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;SAY &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="mf">18.47</span><span class="p">)])</span>     <span class="c1"># = starting marginal reference height at surface 1 (semi-diameter of entrance pupil)</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;SCY FANG 20.81&#39;</span><span class="p">])</span>      <span class="c1"># define reference object height, important for FOB!, p. 66 of KDP-2 manual, express object by angle</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;TH 1.0E20&#39;</span><span class="p">])</span>           <span class="c1"># set thickness of 1st surface to infinite (beam collimated)</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;AIR&#39;</span><span class="p">])</span>                 <span class="c1"># the medium of between surface 0 is air</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;AIR&#39;</span><span class="p">])</span>                 <span class="c1"># insert 2nd surface with medium air</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;RD 40.94&#39;</span><span class="p">])</span>            <span class="c1"># set the radius of the 2nd surface</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;TH 8.74&#39;</span><span class="p">])</span>             <span class="c1"># set the thickness between 2nd surface and 3rd surface</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;CLAP 18.5&#39;</span><span class="p">])</span>           <span class="c1"># set circular clear aperture to ...</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;lbl, 1st lens 1st surface&#39;</span><span class="p">])</span>  <span class="c1"># give surface a label</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;GLCAT SSK4&#39;</span><span class="p">])</span>          <span class="c1"># set the medium to glass &quot;SSK4&quot;</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;TH 11.05&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;CLAP 18.5&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;AIR&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;lbl, 1st lens 2nd surface&#39;</span><span class="p">])</span>  <span class="c1"># give surface a label</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;RD -55.65&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;TH 2.78&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;CLAP 14.9&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;GLCAT SF2&#39;</span><span class="p">])</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;RD 39.75&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;TH 1&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;CLAP 14.4&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;AIR&#39;</span><span class="p">])</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;TH 6.63&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;REFS&#39;</span><span class="p">])</span>                <span class="c1"># reference surface</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ASTOP&#39;</span><span class="p">])</span>               <span class="c1"># aperture stop</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;lbl, aperture stop&#39;</span><span class="p">])</span>  <span class="c1"># give surface a label</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;AIR&#39;</span><span class="p">])</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;RD 107.9&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;TH 9.54&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;CLAP 15.5&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;GLCAT SSK4&#39;</span><span class="p">])</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;RD -43.33&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;TH 78&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;CLAP 15.5&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;AIR&#39;</span><span class="p">])</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;AIR&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;AIR&#39;</span><span class="p">])</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;EOS&#39;</span><span class="p">])</span>
+    
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;VIEVIG YES&#39;</span><span class="p">])</span>         <span class="c1"># automatic vignetting in VIE</span>
+    <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;vie&#39;</span><span class="p">])</span>                <span class="c1"># show lens layout</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<p>You then go to KDP-2 folder start the application and input “input file Cooke_triplet.dat” in the command line. This will execute all the commands written with the function “wl” in this section. You will obtain this plot:</p>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/KDP-2_setup_model_example_python_5_0.png" src="_images/KDP-2_setup_model_example_python_5_0.png" />
+</div>
+</div>
+<p>Or view in orthographic projection:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;vie ortho&#39;</span><span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/KDP-2_setup_model_example_python_8_0.png" src="_images/KDP-2_setup_model_example_python_8_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;headings on&#39;</span><span class="p">])</span>    <span class="c1"># show headings of tables </span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;rtg all&#39;</span><span class="p">])</span>        <span class="c1"># radius, thickness, glass material of current lens</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/KDP-2_setup_model_example_python_10_0.png" src="_images/KDP-2_setup_model_example_python_10_0.png" />
+</div>
+</div>
+<p>The lens can be updated and its specifications can be changed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;u l&#39;</span><span class="p">])</span>             <span class="c1"># update lens</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;chg 2&#39;</span><span class="p">])</span>           <span class="c1"># change surface 2</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;rd 40.94&#39;</span><span class="p">])</span>        <span class="c1"># radius to value</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;chg 3&#39;</span><span class="p">])</span>           <span class="c1"># change surface 3</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;th 11.05&#39;</span><span class="p">])</span> 
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ins 1&#39;</span><span class="p">])</span>           <span class="c1"># insert surface at 1</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;del 1&#39;</span><span class="p">])</span>           <span class="c1"># delete surface at 1</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;eos&#39;</span><span class="p">])</span>             <span class="c1"># exit update lens</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="analysis">
+<h2><span class="section-number">2.2.2. </span>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+<p>The aberrations of this Cooke triplet can be analyzed with the following commands:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;PXTY ALL&#39;</span><span class="p">])</span>    <span class="c1"># display YZ-plane paraxial ray data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The 3rd, 5th and 7th order aberration values calculated are based on the work of Buchdahl. To calculate and display the 3rd, 5th and 7th order spherical aberrations, issue the command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;SA357 ALL&#39;</span><span class="p">])</span>   <span class="c1"># the 3rd, 5th and 7th order spherical aberrations</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/KDP-2_setup_model_example_python_17_0.png" src="_images/KDP-2_setup_model_example_python_17_0.png" />
+</div>
+</div>
+<p>Chromatic differences:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;PCW?&#39;</span><span class="p">])</span>        <span class="c1"># query primary and secondary wavelength pairs</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;SCW?&#39;</span><span class="p">])</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;PCDSA ALL&#39;</span><span class="p">])</span>   <span class="c1"># calculate the primary chromatic differences for 3rd, 5th and 7th order spherical aberrations</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>ABERRATION FANS AND THEIR PLOTS - To generate transverse fan data at a specific point in the field of view, issue an “FOB” command which specifies that fractional field of view location. In our example lens, the SCY FANG value was 20.81 degrees. To use “FOB” to specify that analysis is to be performed at a Y-object angle of 2.5 degrees and an X-object angle of 1.25 degrees, issue:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;FOB 0.1201 0.060067&#39;</span><span class="p">])</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;YFAN, -1, 1, 1, 11&#39;</span><span class="p">])</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;DRAWFAN&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>One obtains this table of values which can also be written to a text file (and plotted with matplotlib, e.g.) or it can be directly plotted with KDP-2 (see below).</p>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/KDP-2_setup_model_example_python_24_0.png" src="_images/KDP-2_setup_model_example_python_24_0.png" />
+</div>
+</div>
+<p>The “FANS” command can be used to generate more complex ray fan aberration graphics. The next two commands generate YZ and XZ-plane, transverse ray aberration plots at three pre-selected field of view positions.</p>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/KDP-2_setup_model_example_python_26_0.png" src="_images/KDP-2_setup_model_example_python_26_0.png" />
+</div>
+</div>
+<p>Plotting of spot diagrams in KDP-2 and with python (see: <a class="reference internal" href="KDP-2_spot_diagram_matplotlib.html"><span class="doc std std-doc">Create spot diagram and plot with python</span></a>), using:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;FOB .1 .1&#39;</span><span class="p">])</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;SPD&#39;</span><span class="p">])</span>         <span class="c1"># create spot diagram data</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;PLTSPD&#39;</span><span class="p">])</span>      <span class="c1"># plot spot diagram in KDP-2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/KDP-2_setup_model_example_python_29_0.png" src="_images/KDP-2_setup_model_example_python_29_0.png" />
+</div>
+</div>
+<p>DIFFRACTION MTF - Diffraction MTF generation and plotting is almost as easy. Try the following commands to generate DOTF data at fractional object point Y=.1 and X=.2:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;FOB .1 .2&#39;</span><span class="p">])</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;CAPFN&#39;</span><span class="p">])</span>         <span class="c1"># generates the complex aperture function</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;DOTF&#39;</span><span class="p">])</span>          <span class="c1"># generates the MTF</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;pltdotf&#39;</span><span class="p">])</span>       <span class="c1"># plots the MTF </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/KDP-2_setup_model_example_python_32_0.png" src="_images/KDP-2_setup_model_example_python_32_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="optimization-with-predefined-operands">
+<h2><span class="section-number">2.2.3. </span>Optimization with predefined operands:<a class="headerlink" href="#optimization-with-predefined-operands" title="Permalink to this headline">¶</a></h2>
+<p>The aim is to vary the last surface curvature and its conic constant of the current lens so as to change the system focal length to 100 mm while at the same time driving the 3rd order spherical aberration to 0.0.</p>
+<p>Lists of predefined target operands in KDP-2 are here:
+<a class="reference internal" href="KDP-2_markdown.html"><span class="doc std std-doc"><strong>Operands</strong></span></a></p>
+<p>Just type the following lines in the KDP-2 cli:</p>
+<p>Do a PY solve:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;U L&#39;</span><span class="p">])</span>                  <span class="c1"># update lens</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;CHG  9&#39;</span><span class="p">])</span>               <span class="c1"># change surface 9</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;PY&#39;</span><span class="p">])</span>                   <span class="c1"># PY solve to this surface</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;EOS&#39;</span><span class="p">])</span>                  <span class="c1"># return to CMD level</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, set up the operands (targets) with the following commands:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;MERIT&#39;</span><span class="p">])</span>                <span class="c1"># enter merit creation mode</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;FLCLTH 100 1 0 10&#39;</span><span class="p">])</span>    <span class="c1"># paraxial focal length be targeted to 100 with a weight of 1 for surfaces 0 to 10 (the entire lens).</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;SA3 0 1&#39;</span><span class="p">])</span>              <span class="c1"># 3rd order spherical aberration to 0.0 with a weight of 1</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;EOS&#39;</span><span class="p">])</span>                  <span class="c1"># return to CMD level</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, set up the variables with the following commands:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;variables&#39;</span><span class="p">])</span>            <span class="c1"># enter variables creation mode</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;cv 8&#39;</span><span class="p">])</span>                 <span class="c1"># define curvature and conic constant of surface 8 to be variable</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;cc 8&#39;</span><span class="p">])</span>  
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;eos&#39;</span><span class="p">])</span>                  <span class="c1"># save these definitions and return to CMD level</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;VB&#39;</span><span class="p">])</span>         <span class="c1"># lists the current variables</span>
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;OPRD&#39;</span><span class="p">])</span>       <span class="c1"># This lists the current operands with their current and targeted values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This optimization problem can be solved with damped least squares (ITER) or directly (PFIND) since we have two variables and two operands which happen to be linearly independent. We will do a combination of the two techniques. Type:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ITER&#39;</span><span class="p">])</span> 
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;PFIND&#39;</span><span class="p">])</span> 
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ITER&#39;</span><span class="p">])</span> 
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;VB&#39;</span><span class="p">])</span> 
+<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;OPRD&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After these optimization cycles, the FMT (Figure of Merit) will be much smaller than it was. Before we started, it was 0.13095. The new focal length and SA3 values will be very near their target values. Further cycles could drive the values closer to their targets. The new curvature and conic values can be seen by issuing another VB command or by issuing an RTG ALL or an RTG 8 command. The thickness of surface 9 has now changed to 0.474615 mm in order to maintain paraxial focus. There are other optimization methods described in the reference manual which you should try.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="KDP-2_setup_model_commands.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2.1. </span>Commands</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="KDP-2_spot_diagram_matplotlib.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Create spot diagram and plot with python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By J. Herbst<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
