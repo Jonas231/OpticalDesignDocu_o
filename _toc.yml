@@ -40,6 +40,7 @@ parts:
     - file: OpTaliX_setup_model
       sections:
       - file: OpTaliX_setup_model_example_python
+      - file: OpTaliX_plotly_spot_diagram
     - file: OpTaliX_markdown
       sections:
       - file: OpTaliX_variables

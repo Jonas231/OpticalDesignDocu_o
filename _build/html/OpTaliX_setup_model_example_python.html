@@ -50,8 +50,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Setup of Model" href="OpTaliX_setup_model.html" />
-    <link rel="prev" title="1. OpTaliX" href="OpTaliX_markdown.html" />
+    <link rel="next" title="1.2. Interactive Python spot diagrams" href="OpTaliX_plotly_spot_diagram.html" />
+    <link rel="prev" title="1. Setup of Model" href="OpTaliX_setup_model.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -203,8 +203,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="OpTaliX_markdown.html">
-   1. OpTaliX
+  <a class="reference internal" href="OpTaliX_setup_model.html">
+   1. Setup of Model
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -217,11 +217,16 @@ const thebe_selector_output = ".output, .cell_output"
      1.1. Setup a Cooke triplet with python
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_plotly_spot_diagram.html">
+     1.2. Interactive Python spot diagrams
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="OpTaliX_setup_model.html">
-   2. Setup of Model
+  <a class="reference internal" href="OpTaliX_markdown.html">
+   2. OpTaliX
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -333,6 +338,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="ZEMAX_markdown.html">
    1. ZEMAX
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZEMAX_links.html">
+   2. ZEMAX links
   </a>
  </li>
 </ul>
@@ -695,40 +705,16 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Or view in orthographic projection:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;vie ortho&#39;</span><span class="p">])</span> 
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_4840</span>\<span class="mf">741960436.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;vie ortho&#39;</span><span class="p">])</span>
-
-<span class="nn">~\AppData\Local\Temp\ipykernel_4840\191631149.py</span> in <span class="ni">wl</span><span class="nt">(file, L)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">Function</span> <span class="k">for</span> <span class="n">writing</span> <span class="n">a</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">file</span><span class="o">.</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="s2">&quot;&quot;&quot;   </span>
-<span class="ne">----&gt; </span><span class="mi">5</span><span class="s2">     file.writelines(L)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="s2">     file.write(&quot;</span><span class="se">\n</span><span class="s2">&quot;)</span>
-
-<span class="ne">ValueError</span>: I/O operation on closed file.
-</pre></div>
+<img alt="_images/OpTaliX_setup_model_example_python_7_0.png" src="_images/OpTaliX_setup_model_example_python_7_0.png" />
 </div>
 </div>
-</div>
+<p>Or use POV ray to render the lens in 3D. This is no interactive plot, however.</p>
 <div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/OpTaliX_setup_model_example_python_9_0.png" src="_images/OpTaliX_setup_model_example_python_9_0.png" />
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;headings on&#39;</span><span class="p">])</span>    <span class="c1"># show headings of tables </span>
-<span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;rtg all&#39;</span><span class="p">])</span>        <span class="c1"># radius, thickness, glass material of current lens</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove_input docutils container">
 </div>
 <p>The lens can be updated and its specifications can be changed:</p>
 <div class="cell docutils container">
@@ -741,6 +727,26 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ins 1&#39;</span><span class="p">])</span>           <span class="c1"># insert surface at 1</span>
 <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;del 1&#39;</span><span class="p">])</span>           <span class="c1"># delete surface at 1</span>
 <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;eos&#39;</span><span class="p">])</span>             <span class="c1"># exit update lens</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_1372</span>\<span class="mf">1498240027.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;u l&#39;</span><span class="p">])</span>             <span class="c1"># update lens</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;chg 2&#39;</span><span class="p">])</span>           <span class="c1"># change surface 2</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;rd 40.94&#39;</span><span class="p">])</span>        <span class="c1"># radius to value</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;chg 3&#39;</span><span class="p">])</span>           <span class="c1"># change surface 3</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;th 11.05&#39;</span><span class="p">])</span>
+
+<span class="nn">~\AppData\Local\Temp\ipykernel_1372\191631149.py</span> in <span class="ni">wl</span><span class="nt">(file, L)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">Function</span> <span class="k">for</span> <span class="n">writing</span> <span class="n">a</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">file</span><span class="o">.</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="s2">&quot;&quot;&quot;   </span>
+<span class="ne">----&gt; </span><span class="mi">5</span><span class="s2">     file.writelines(L)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="s2">     file.write(&quot;</span><span class="se">\n</span><span class="s2">&quot;)</span>
+
+<span class="ne">ValueError</span>: I/O operation on closed file.
 </pre></div>
 </div>
 </div>
@@ -864,23 +870,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_14600</span><span class="o">/</span><span class="mf">3373910476.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;VB&#39;</span><span class="p">])</span>         <span class="c1"># lists the current variables</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">wl</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;OPRD&#39;</span><span class="p">])</span>       <span class="c1"># This lists the current operands with their current and targeted values</span>
-
-<span class="nn">~\AppData\Local\Temp/ipykernel_14600/191631149.py</span> in <span class="ni">wl</span><span class="nt">(file, L)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">Function</span> <span class="k">for</span> <span class="n">writing</span> <span class="n">a</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">file</span><span class="o">.</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="s2">&quot;&quot;&quot;   </span>
-<span class="ne">----&gt; </span><span class="mi">5</span><span class="s2">     file.writelines(L)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="s2">     file.write(&quot;</span><span class="se">\n</span><span class="s2">&quot;)</span>
-
-<span class="ne">ValueError</span>: I/O operation on closed file.
-</pre></div>
-</div>
-</div>
 </div>
 <p>This optimization problem can be solved with damped least squares (ITER) or directly (PFIND) since we have two variables and two operands which happen to be linearly independent. We will do a combination of the two techniques. Type:</p>
 <div class="cell docutils container">
@@ -923,17 +912,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="OpTaliX_markdown.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="OpTaliX_setup_model.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>OpTaliX</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Setup of Model</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="OpTaliX_setup_model.html" title="next page">
+    <a class='right-next' id="next-link" href="OpTaliX_plotly_spot_diagram.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Setup of Model</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>Interactive Python spot diagrams</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

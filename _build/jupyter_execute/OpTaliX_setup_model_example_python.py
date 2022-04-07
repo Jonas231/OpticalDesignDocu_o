@@ -158,31 +158,21 @@ Image(filename = PATH + "\OpTaliX_Cooke_triplet.png", width=1000, height=800)
 # In[4]:
 
 
-wl(f, ['vie ortho']) 
+Image(filename = PATH + "\OpTaliX_Cooke_triplet_ortho.png", width=1000, height=800)
 
 
-# In[ ]:
+# Or use POV ray to render the lens in 3D. This is no interactive plot, however.
+# 
+
+# In[5]:
 
 
-Image(filename = PATH + "\KDP-2_Cooke_triplet_ortho.png", width=1000, height=800)
-
-
-# In[ ]:
-
-
-wl(f, ['headings on'])    # show headings of tables 
-wl(f, ['rtg all'])        # radius, thickness, glass material of current lens
-
-
-# In[ ]:
-
-
-Image(filename = PATH + "\KDP-2_Cooke_triplet_table.png", width=600, height=600)
+Image(filename = PATH + "\OpTaliX_Cooke_triplet_povray.png", width=600, height=600)
 
 
 # The lens can be updated and its specifications can be changed:
 
-# In[ ]:
+# In[6]:
 
 
 wl(f, ['u l'])             # update lens
@@ -342,7 +332,7 @@ wl(f, ['cc 8'])
 wl(f, ['eos'])                  # save these definitions and return to CMD level
 
 
-# In[107]:
+# In[ ]:
 
 
 wl(f, ['VB'])         # lists the current variables

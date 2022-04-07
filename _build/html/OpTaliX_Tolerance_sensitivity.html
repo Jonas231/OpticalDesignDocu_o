@@ -217,6 +217,11 @@ const thebe_selector_output = ".output, .cell_output"
      1.1. Setup a Cooke triplet with python
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_plotly_spot_diagram.html">
+     1.2. Interactive Python spot diagrams
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -523,7 +528,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><table id="8a8b1e4b-d318-4b65-a58c-6afd4beb47fd" class="display"style="max-width:100%"><thead><th></th><th>Description</th><th>Order</th></thead><tbody><tr><td>Loading... (need <a href=https://mwouts.github.io/itables/troubleshooting.html>help</a>?)</td></tr></tbody></table>
+<div class="output text_html"><table id="aee0a4c0-1906-4c52-841a-62bd35c1fa7c" class="display"style="max-width:100%"><thead><th></th><th>Description</th><th>Order</th></thead><tbody><tr><td>Loading... (need <a href=https://mwouts.github.io/itables/troubleshooting.html>help</a>?)</td></tr></tbody></table>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 <style> table td {
     text-overflow: ellipsis;
@@ -553,7 +558,7 @@ const thebe_selector_output = ".output, .cell_output"
 
         // Display the table
         $(document).ready(function () {
-            $('#8a8b1e4b-d318-4b65-a58c-6afd4beb47fd').DataTable(dt_args);
+            $('#aee0a4c0-1906-4c52-841a-62bd35c1fa7c').DataTable(dt_args);
         });
     } else {
         require(["jquery", "datatables"], ($, datatables) => {
@@ -563,7 +568,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                 // Display the table
                 $(document).ready(function () {
-                    $('#8a8b1e4b-d318-4b65-a58c-6afd4beb47fd').DataTable(dt_args);
+                    $('#aee0a4c0-1906-4c52-841a-62bd35c1fa7c').DataTable(dt_args);
                 });
             }
         )
@@ -571,6 +576,14 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
 </div></div>
 </div>
+<p>Using Tolerance Sensitivity Items in Optimization
+If optimizing (minimizing) for tolerance sensitivity, the various tolerance sensitivity items described in the previous section should be understood as aberrations added to the targets/constraints (merit function) list.</p>
+<p>See also the syntax for defining tolerance sensitivity. Here is a typical example in the optimization targets/constraints list:</p>
+<p>efl = 100  Focal length shall be exactly 100mm.<br />
+spd 0  Spot diameter (rms) shall be zero (minimized) for all fields, wavelengths, zoom positions.<br />
+tsa s1..5 f1..2 w1 0  Tolerance sensitivity on surface tilt about X-axis shall be minimized for surfaces 1-5, fields 1-2 and wavelength number 1.<br />
+tsy 0  Tolerance sensitivity on surface Y-decenter shall be minimized for all surfaces, all fields and all wavelengths defined in the optical system configuration.</p>
+<p>Note: Do not attempt to request a tolerance sensitivity item to become exactly zero, e.g. ‘TSA = 0’ as this is impossible on optical elements/surfaces that have optical effect. Instead minimize it by omitting the equal ‘=’ sign in the constraints definition, e.g. ‘TSA 0’.</p>
 </div>
 
     <script type="text/x-thebe-config">
