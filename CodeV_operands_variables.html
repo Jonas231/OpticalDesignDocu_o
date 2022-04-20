@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Optical Design Docu &#8212; OpticalDesignDocu</title>
+    <title>Variables &#8212; OpticalDesignDocu</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -48,9 +48,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. About KDP-2" href="KDP-2_about.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -88,8 +89,8 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Optical Design Docu
   </a>
  </li>
@@ -443,9 +444,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/CodeV_operands_variables.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -463,7 +464,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FCodeV_operands_variables.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -479,6 +480,23 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/CodeV_operands_variables.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -491,7 +509,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Optical Design Docu</h1>
+                <h1>Variables</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -502,69 +520,118 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="optical-design-docu">
-<h1>Optical Design Docu<a class="headerlink" href="#optical-design-docu" title="Permalink to this headline">¶</a></h1>
-<p>This book compares the syntax and features of various optical design programs (free and commercial software). The programs considered are <a class="reference external" href="http://www.ecalculations.com/">KDP-2</a>, its evolution <a class="reference external" href="https://github.com/dinosauria123/Koko/">Koko</a>, <a class="reference external" href="http://www.optenso.com/">OpTaliX</a>, <a class="reference external" href="https://lambdares.com/oslo/">OSLO</a>, <a class="reference external" href="https://www.zemax.com/">ZEMAX</a>, <a class="reference external" href="https://www.synopsys.com/optical-solutions/codev.html">CodeV</a>, and <a class="reference external" href="https://osdoptics.com/">SYNOPSYS</a>. These are the established and most mature software packages available worldwide.</p>
-<p>KDP-2 is considered because it is free, open source and very versatile. OpTaliX is the most cost-effective commercial program considering its many features. OSLO is even more powerful while it keeps a decent price policy and maybe more effective than ZEMAX or CodeV in some areas. ZEMAX and CodeV are the standards in the optical design community (and the most costly programs with the highest quantity of features, developers and users). SYNOPSYS is an advanced optical design program.</p>
-<p>I feel there is an need to compares these programs with respect to capabilities and also to provide a reference which lightens working with some of these programs (where the documentation is not perfected, such as KDP-2) or where manuals are very long and you have to scroll through big tables (ZEMAX). Also some folks may want to work with several of these programs alternatively and not get confused by the slightly different command syntax.</p>
-<p>The texts of the author are by no means intended to favor one of those programs over the others. There are also some incomplete python-based packages, such as <a class="reference external" href="https://github.com/Sterncat/opticspy">opticspy</a>, <a class="reference external" href="https://github.com/mess42/pyrate">Pyrate</a>, <a class="reference external" href="https://github.com/mjhoptics/ray-optics">ray-optics</a>, <a class="reference external" href="https://github.com/quartiq/rayopt">rayopt</a>, <a class="reference external" href="https://github.com/bryancole/raypier_optics">Raypier</a>, and many others.</p>
-<p>Non-sequential raytracers such as <a class="reference external" href="https://photonengr.com/fred-software/">FRED</a>, <a class="reference external" href="https://www.synopsys.com/optical-solutions/lighttools.html">Lighttools</a>, <a class="reference external" href="https://lambdares.com/tracepro/">TracePro</a>,  <a class="reference external" href="https://www.hembach-photonik.de/en/rayjack-one/">RAYJACK ONE</a> are not considered in this book.</p>
-<p>Another goal of this book is to collect links and information related to the practice of optical design.</p>
-<p>Please check out the following pages.</p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">KDP-2</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="KDP-2_about.html">1. About KDP-2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KDP-2_setup_model.html">2. Setup of Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KDP-2_markdown.html">3. Operands</a></li>
-</ul>
+  <div class="tex2jax_ignore mathjax_ignore section" id="variables">
+<h1>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">itables</span>
+<span class="kn">from</span> <span class="nn">itables</span> <span class="kn">import</span> <span class="n">init_notebook_mode</span><span class="p">,</span> <span class="n">show</span>
+<span class="kn">import</span> <span class="nn">itables.options</span> <span class="k">as</span> <span class="nn">opt</span>
+
+<span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">all_interactive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">opt</span><span class="o">.</span><span class="n">lengthMenu</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span>
+<span class="c1">#opt.classes = [&quot;display&quot;, &quot;cell-border&quot;]</span>
+<span class="c1">#opt.classes = [&quot;display&quot;, &quot;nowrap&quot;]</span>
+
+<span class="n">opt</span><span class="o">.</span><span class="n">columnDefs</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;className&quot;</span><span class="p">:</span> <span class="s2">&quot;dt-left&quot;</span><span class="p">,</span> <span class="s2">&quot;targets&quot;</span><span class="p">:</span> <span class="s2">&quot;_all&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="s2">&quot;500px&quot;</span><span class="p">,</span> <span class="s2">&quot;targets&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}]</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpTaliX</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="OpTaliX_setup_model.html">1. Setup of Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="OpTaliX_markdown.html">2. Operands</a></li>
-</ul>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">OSLO</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="OSLO_markdown.html">1. OSLO</a></li>
-</ul>
+<div class="cell_output docutils container">
+<script type="application/javascript">if (typeof require !== 'undefined')
+    require.config({
+        paths: {
+            jquery: 'https://code.jquery.com/jquery-3.5.1.min',
+            datatables: 'https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min',
+        }
+    });
+</script></div>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">ZEMAX</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ZEMAX_markdown.html">1. ZEMAX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ZEMAX_links.html">2. ZEMAX links</a></li>
-</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cwd</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;Excel&#39;</span><span class="p">,</span> <span class="s1">&#39;CodeV_optimization_operands.xlsx&#39;</span><span class="p">))</span>
+<span class="n">df_var</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">sheet_name</span> <span class="o">=</span> <span class="s2">&quot;Diffraction Analysis&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">df_var</span> <span class="o">=</span> <span class="n">df_var</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>   <span class="c1"># drop nan values</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Code_V</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="CodeV_markdown.html">1. Code V</a></li>
-</ul>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Synopsys</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Synopsys_markdown.html">1. SYNOPSYS</a></li>
-</ul>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">~\Anaconda3\envs\mypython37\lib\site-packages\xlrd\book.py</span> in <span class="ni">sheet_by_name</span><span class="nt">(self, sheet_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">473</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">474</span>             <span class="n">sheetx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sheet_names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">475</span>         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+
+<span class="ne">ValueError</span>: &#39;Diffraction Analysis&#39; is not in list
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">XLRDError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_24964</span>\<span class="mf">3991176504.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cwd</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;Excel&#39;</span><span class="p">,</span> <span class="s1">&#39;CodeV_optimization_operands.xlsx&#39;</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">df_var</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">sheet_name</span> <span class="o">=</span> <span class="s2">&quot;Diffraction Analysis&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">df_var</span> <span class="o">=</span> <span class="n">df_var</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>   <span class="c1"># drop nan values</span>
+
+<span class="nn">~\Anaconda3\envs\mypython37\lib\site-packages\pandas\util\_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">294</span>                 <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">295</span>                 <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="ne">FutureWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">296</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">297</span> 
+<span class="g g-Whitespace">    </span><span class="mi">298</span>         <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nn">~\Anaconda3\envs\mypython37\lib\site-packages\pandas\io\excel\_base.py</span> in <span class="ni">read_excel</span><span class="nt">(io, sheet_name, header, names, index_col, usecols, squeeze, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, thousands, comment, skipfooter, convert_float, mangle_dupe_cols)</span>
+<span class="g g-Whitespace">    </span><span class="mi">332</span>         <span class="n">skipfooter</span><span class="o">=</span><span class="n">skipfooter</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">333</span>         <span class="n">convert_float</span><span class="o">=</span><span class="n">convert_float</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">334</span>         <span class="n">mangle_dupe_cols</span><span class="o">=</span><span class="n">mangle_dupe_cols</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span> 
+
+<span class="nn">~\Anaconda3\envs\mypython37\lib\site-packages\pandas\io\excel\_base.py</span> in <span class="ni">parse</span><span class="nt">(self, sheet_name, header, names, index_col, usecols, squeeze, converters, true_values, false_values, skiprows, nrows, na_values, parse_dates, date_parser, thousands, comment, skipfooter, convert_float, mangle_dupe_cols, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">924</span>             <span class="n">convert_float</span><span class="o">=</span><span class="n">convert_float</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">925</span>             <span class="n">mangle_dupe_cols</span><span class="o">=</span><span class="n">mangle_dupe_cols</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">926</span>             <span class="o">**</span><span class="n">kwds</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">927</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">928</span> 
+
+<span class="nn">~\Anaconda3\envs\mypython37\lib\site-packages\pandas\io\excel\_base.py</span> in <span class="ni">parse</span><span class="nt">(self, sheet_name, header, names, index_col, usecols, squeeze, dtype, true_values, false_values, skiprows, nrows, na_values, verbose, parse_dates, date_parser, thousands, comment, skipfooter, convert_float, mangle_dupe_cols, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">437</span> 
+<span class="g g-Whitespace">    </span><span class="mi">438</span>             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">asheetname</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">439</span>                 <span class="n">sheet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sheet_by_name</span><span class="p">(</span><span class="n">asheetname</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">440</span>             <span class="k">else</span><span class="p">:</span>  <span class="c1"># assume an integer if not a string</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span>                 <span class="n">sheet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_sheet_by_index</span><span class="p">(</span><span class="n">asheetname</span><span class="p">)</span>
+
+<span class="nn">~\Anaconda3\envs\mypython37\lib\site-packages\pandas\io\excel\_xlrd.py</span> in <span class="ni">get_sheet_by_name</span><span class="nt">(self, name)</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> 
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="k">def</span> <span class="nf">get_sheet_by_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">44</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">book</span><span class="o">.</span><span class="n">sheet_by_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span> 
+<span class="g g-Whitespace">     </span><span class="mi">46</span>     <span class="k">def</span> <span class="nf">get_sheet_by_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+
+<span class="nn">~\Anaconda3\envs\mypython37\lib\site-packages\xlrd\book.py</span> in <span class="ni">sheet_by_name</span><span class="nt">(self, sheet_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">474</span>             <span class="n">sheetx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sheet_names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">475</span>         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">476</span>             <span class="k">raise</span> <span class="n">XLRDError</span><span class="p">(</span><span class="s1">&#39;No sheet named &lt;</span><span class="si">%r</span><span class="s1">&gt;&#39;</span> <span class="o">%</span> <span class="n">sheet_name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">477</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sheet_by_index</span><span class="p">(</span><span class="n">sheetx</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">478</span> 
+
+<span class="ne">XLRDError</span>: No sheet named &lt;&#39;Diffraction Analysis&#39;&gt;
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Comparison</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Comparison_markdown.html">1. Comparison</a></li>
-</ul>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optical Design Practice</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="OpticDesign_markdown.html">1. Optical Design Links</a></li>
-</ul>
 </div>
-<p>The source of this book is located here:
-<a class="reference external" href="https://github.com/Jonas231/OpticalDesignDocu_o">Source</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_var</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -592,13 +659,6 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="KDP-2_about.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>About KDP-2</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             
         </div>

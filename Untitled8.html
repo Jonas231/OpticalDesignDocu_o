@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Optical Design Docu &#8212; OpticalDesignDocu</title>
+    <title>&lt;no title&gt; &#8212; OpticalDesignDocu</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -48,9 +48,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. About KDP-2" href="KDP-2_about.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -88,8 +89,8 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Optical Design Docu
   </a>
  </li>
@@ -443,9 +444,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Untitled8.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -463,7 +464,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUntitled8.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -479,11 +480,36 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Untitled8.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -491,82 +517,26 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Optical Design Docu</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="optical-design-docu">
-<h1>Optical Design Docu<a class="headerlink" href="#optical-design-docu" title="Permalink to this headline">¶</a></h1>
-<p>This book compares the syntax and features of various optical design programs (free and commercial software). The programs considered are <a class="reference external" href="http://www.ecalculations.com/">KDP-2</a>, its evolution <a class="reference external" href="https://github.com/dinosauria123/Koko/">Koko</a>, <a class="reference external" href="http://www.optenso.com/">OpTaliX</a>, <a class="reference external" href="https://lambdares.com/oslo/">OSLO</a>, <a class="reference external" href="https://www.zemax.com/">ZEMAX</a>, <a class="reference external" href="https://www.synopsys.com/optical-solutions/codev.html">CodeV</a>, and <a class="reference external" href="https://osdoptics.com/">SYNOPSYS</a>. These are the established and most mature software packages available worldwide.</p>
-<p>KDP-2 is considered because it is free, open source and very versatile. OpTaliX is the most cost-effective commercial program considering its many features. OSLO is even more powerful while it keeps a decent price policy and maybe more effective than ZEMAX or CodeV in some areas. ZEMAX and CodeV are the standards in the optical design community (and the most costly programs with the highest quantity of features, developers and users). SYNOPSYS is an advanced optical design program.</p>
-<p>I feel there is an need to compares these programs with respect to capabilities and also to provide a reference which lightens working with some of these programs (where the documentation is not perfected, such as KDP-2) or where manuals are very long and you have to scroll through big tables (ZEMAX). Also some folks may want to work with several of these programs alternatively and not get confused by the slightly different command syntax.</p>
-<p>The texts of the author are by no means intended to favor one of those programs over the others. There are also some incomplete python-based packages, such as <a class="reference external" href="https://github.com/Sterncat/opticspy">opticspy</a>, <a class="reference external" href="https://github.com/mess42/pyrate">Pyrate</a>, <a class="reference external" href="https://github.com/mjhoptics/ray-optics">ray-optics</a>, <a class="reference external" href="https://github.com/quartiq/rayopt">rayopt</a>, <a class="reference external" href="https://github.com/bryancole/raypier_optics">Raypier</a>, and many others.</p>
-<p>Non-sequential raytracers such as <a class="reference external" href="https://photonengr.com/fred-software/">FRED</a>, <a class="reference external" href="https://www.synopsys.com/optical-solutions/lighttools.html">Lighttools</a>, <a class="reference external" href="https://lambdares.com/tracepro/">TracePro</a>,  <a class="reference external" href="https://www.hembach-photonik.de/en/rayjack-one/">RAYJACK ONE</a> are not considered in this book.</p>
-<p>Another goal of this book is to collect links and information related to the practice of optical design.</p>
-<p>Please check out the following pages.</p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">KDP-2</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="KDP-2_about.html">1. About KDP-2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KDP-2_setup_model.html">2. Setup of Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KDP-2_markdown.html">3. Operands</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpTaliX</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="OpTaliX_setup_model.html">1. Setup of Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="OpTaliX_markdown.html">2. Operands</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">OSLO</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="OSLO_markdown.html">1. OSLO</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">ZEMAX</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ZEMAX_markdown.html">1. ZEMAX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ZEMAX_links.html">2. ZEMAX links</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Code_V</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="CodeV_markdown.html">1. Code V</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Synopsys</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Synopsys_markdown.html">1. SYNOPSYS</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Comparison</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Comparison_markdown.html">1. Comparison</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Optical Design Practice</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="OpticDesign_markdown.html">1. Optical Design Links</a></li>
-</ul>
-</div>
-<p>The source of this book is located here:
-<a class="reference external" href="https://github.com/Jonas231/OpticalDesignDocu_o">Source</a></p>
-</div>
-
+  
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -592,13 +562,6 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="KDP-2_about.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>About KDP-2</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             
         </div>
