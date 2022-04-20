@@ -1,0 +1,61 @@
+! Get transverse ray aberration fan data
+!
+print "start."
+
+$nfi = 4    ! number of fields defined
+$nwl = 3    ! number of fields defined
+
+
+out fil C:\Work\OpTaliX\Test\ray_fan_py.txt   ! redirect output to file
+
+print "C number of wavelengths, number of fields: "
+print $nwl $nfi
+do $wl = 1, $nwl
+	$wavelength = [WL w$wl]
+	print $wl $wavelength
+enddo
+
+do $fi = 1, $nfi
+	$fxan = [XAN f$fi]
+	$fyan = [YAN f$fi]
+	print 'format I3 F13.9 ,F13.9' $fi $fxan $fyan
+enddo
+!
+$maxfl = [si]           ! get number of surfaces
+$py = 1
+$px = 1
+$dpy = 0.01
+$dpx = 0.01
+glo no    ! means xyz relative to local surface vertex
+! does not work with glo yes
+
+do $wl = 1, $nwl
+   do $fi = 1, $nfi
+      do $p = -$py,$py, $dpy
+         $y = [y s$maxfl f$fi w$wl 0 $p]
+         print 'format I3, I3, F13.9 ,F13.9' $wl $fi $p $y  
+      enddo
+   enddo
+enddo
+!
+out t                   ! redirect output to terminal (windows)
+
+$fi = 1
+$nfi = 4
+
+out fil C:\Work\OpTaliX\Test\ray_fan_px.txt   ! redirect output to file
+!
+do $wl = 1, $nwl
+   do $fi = 1, $nfi
+      do $p = -$px,$px, $dpx
+         $x = [x s$maxfl f$fi w$wl $p 0]
+         print 'format I3, I3, F13.9, F13.9' $wl $fi $p $x  
+      enddo
+   enddo
+enddo
+!
+
+out t                   ! redirect output to terminal (windows)
+print "finished px and py ray fans."
+
+

@@ -1,0 +1,6 @@
+# About KDP-2
+Klein's optical design program was created by J. E. Klein. It was reverse engineered from "Hexagon" / "ACCOS-V" and has a similar command syntax and additional features. The user interface is a command line interface (cli) with some gui features. Both [KDP-2](http://www.ecalculations.com/) (Windows, iFort compiler), and its evolution [Koko](https://github.com/dinosauria123/Koko/) (Linux, Windows, gFortran compiler) are open sourced and Fortran77-based with some Fortran90.
+
+See what was written by James Eugene Klein on [KDP-2](http://www.ecalculations.com/):
+
+"KDP-2 incorporates many features similar to those in other optical design codes such as HEXAGON (Hughes Aircraft/Raytheon), ZEMAX, OSLO ( the late-Douglas Sinclair), ACCOS-V and CODE-V (Optical Research Organization). KDP-2 is the way it is since the first optical design code I learned was an ACCOS-V variant called HEXAGON and used at Hughes Aircraft/Raytheon. That code gave that organization its competative advantage over many companies who only had early versions of CODE-V. 

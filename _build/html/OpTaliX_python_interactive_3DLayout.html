@@ -1,0 +1,1235 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.4. OpTaliX: Interactive 3D layout with Python &#8212; OpticalDesignDocu</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. OpTaliX" href="OpTaliX_markdown.html" />
+    <link rel="prev" title="1.3. OpTaliX: Transverse ray fan plot with Python (plotly)" href="OpTaliX_plotly_transverse_ray_fan.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">OpticalDesignDocu</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Optical Design Docu
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  KDP-2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="KDP-2_about.html">
+   1. About KDP-2
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="KDP-2_setup_model.html">
+   2. Setup of Model
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_setup_model_commands.html">
+     2.1. Commands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_setup_model_example_python.html">
+     2.2. Setup a Cooke triplet with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_spot_diagram_matplotlib.html">
+     2.3. Create spot diagram and plot with python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="KDP-2_markdown.html">
+   3. Operands
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_lens_data_base.html">
+     3.1. Lens database items
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_real_single_ray.html">
+     3.2. Real single ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_special_ray.html">
+     3.3. Special real / paraxial ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_aberrations.html">
+     3.4. Aberrations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_parax_ray.html">
+     3.5. Paraxial ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_paraxial_chromatic.html">
+     3.6. Paraxial chromatic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_spd_caf.html">
+     3.7. Spot diagram
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_spectrometer.html">
+     3.8. Spectrometer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_real_ray_composite.html">
+     3.9. Real ray composite
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_Gaussian_beam.html">
+     3.10. Gaussian beams
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  OpTaliX
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="OpTaliX_setup_model.html">
+   1. Setup of Model
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_setup_model_example_python.html">
+     1.1. Setup a Cooke triplet with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_plotly_spot_diagram.html">
+     1.2. Interactive Python spot diagrams
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_plotly_transverse_ray_fan.html">
+     1.3. OpTaliX: Transverse ray fan plot with Python (plotly)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.4. OpTaliX: Interactive 3D layout with Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="OpTaliX_markdown.html">
+   2. OpTaliX
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_variables.html">
+     2.1. OpTaliX: Optimization Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_LDI_config.html">
+     2.2. OpTaliX: Lens data item configurations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_LDI_surface.html">
+     2.3. OpTaliX: Lens data items surface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_apertures.html">
+     2.4. OpTaliX: Apertures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Geometric%20Analysis.html">
+     2.5. OpTaliX: Geometric Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_optimization_operands.html">
+     2.6. OpTaliX: Optimization Targets  / Constraints
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_RayData.html">
+     2.7. OpTaliX: Ray data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_paraxial.html">
+     2.8. OpTaliX: Lens data items paraxial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_polarization.html">
+     2.9. OpTaliX: Polarization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Tolerance_sensitivity.html">
+     2.10. OpTaliX: Tolerance and Sensitivity Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Illuminantion_source_data.html">
+     2.11. OpTaliX: Illumination source data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Gaussian_beam.html">
+     2.12. OpTaliX: Gaussian beam
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_fiber_data.html">
+     2.13. OpTaliX: Fiber data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Diffraction_analysis.html">
+     2.14. OpTaliX: Diffraction analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_arrays.html">
+     2.15. OpTaliX: Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_miscellaneous.html">
+     2.16. OpTaliX: Miscellaneous
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  OSLO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="OSLO_markdown.html">
+   1. OSLO
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ZEMAX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZEMAX_markdown.html">
+   1. ZEMAX
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZEMAX_links.html">
+   2. ZEMAX links
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Code V
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="CodeV_markdown.html">
+   1. Code V
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Synopsys
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Synopsys_markdown.html">
+   1. SYNOPSYS
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Comparison
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Comparison_markdown.html">
+   1. Comparison
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Optical Design Practice
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="OpticDesign_markdown.html">
+   1. Optical Design Links
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/OpTaliX_python_interactive_3DLayout.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FOpTaliX_python_interactive_3DLayout.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/OpTaliX_python_interactive_3DLayout.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>OpTaliX: Interactive 3D layout with Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="optalix-interactive-3d-layout-with-python">
+<h1><span class="section-number">1.4. </span>OpTaliX: Interactive 3D layout with Python<a class="headerlink" href="#optalix-interactive-3d-layout-with-python" title="Permalink to this headline">¶</a></h1>
+<p>This section shows that an OpTaliX macro can be used to export all data relevant for generating interactive 3D layout plots with python. The macro looks like this:</p>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>! Get 3D layout incl. rays
+!
+print &quot;start.&quot;
+$maxfl = [si]           ! get number of surfaces
+!$sur = 2
+$wl = 1
+$fi = 1
+
+out fil C:\Work\OpTaliX\Test\layout_3D.txt   ! redirect output to file
+print &quot;C sur vgx vgy vgz r x y n&quot;
+
+do $sur = 0,$maxfl    ! loop through all surfaces
+   ! get vertex data
+   $vgx = [xsc s$sur]
+   $vgy = [ysc s$sur]
+   $vgz = [zsc s$sur]
+   $thi = [thi s$sur]
+      
+   ! get aperture data
+   $rmax = [sd s$sur]   ! Maximum semi-diameter on surface sk.
+   
+   ! get glass material, refractive index
+   $n = [ind s$sur w$wl]
+
+   print &#39;format I3,F14.9, F14.9, F14.9, F14.9, F14.9, G13.5&#39; $sur $vgx $vgy $vgz $rmax $n $thi
+   
+enddo
+
+! get sag data, save in extra file
+! SAG sk x_height y_height 
+
+out fil C:\Work\OpTaliX\Test\sag.txt
+
+do $sur = 1,$maxfl
+   if ($sur &gt; 0) then
+      $rmax = [sd s$sur] 
+      $dr = $rmax/20
+   
+      do $r = -$rmax,$rmax, $dr   ! loop through radial coordinate
+         $xh = $r
+         $sagx = [SAG s$sur $xh 0]
+         $sagy = [SAG s$sur 0 $xh]
+         print &#39;format I3, F14.9, F14.9, F14.9&#39; $sur $r  $sagx $sagy
+      enddo
+   else
+      print &#39;format I3, F14.9, F14.9, F14.9&#39; $sur 0  0 0
+   endif
+enddo
+
+! get homogeneous transformation data
+out fil C:\Work\OpTaliX\Test\TMAT.txt   ! redirect output to file
+
+do $sur = 1,$maxfl
+   TMAT s$sur
+enddo
+
+! get layout ray data
+!out fil C:\Work\OpTaliX\Test\layout_rays.txt   ! redirect output to file
+
+!$px = 0
+!$py = 1
+!do $sur = 1,$maxfl
+!   $y = [y s$sur f1 w1 $px $py]
+!   $x = [x s$sur f1 w1 $px $py]
+!   print &#39;format I3,F10.4, F10.4, F14.9,F14.9&#39; $sur $px $py $x $y
+!enddo
+
+out t                   ! redirect output to terminal (windows)
+
+!#include C:\ProgramData\OpTaliX\macro\ray_fan.mac
+
+! #############################################################
+! Get transverse ray aberration fan data
+!
+print &quot;start layout ray export...&quot;
+
+$nfi = 4    ! number of fields defined
+$nwl = 1    ! number of fields defined
+$sf = [ss]
+
+out fil C:\Work\OpTaliX\Test\ray_fan_py_all.txt   ! redirect output to file
+
+print &quot;C number of surfaces, number of wavelengths, number of fields, stop surface: &quot;
+print $maxfl $nwl $nfi $sf
+
+do $wl = 1, $nwl
+	$wavelength = [WL w$wl]
+	print $wl $wavelength
+enddo
+
+do $fi = 1, $nfi
+	$fxan = [XAN f$fi]
+	$fyan = [YAN f$fi]
+	print &#39;format I3 F13.9 ,F13.9&#39; $fi $fxan $fyan
+enddo
+!
+!$maxfl = [si]           ! get number of surfaces
+$py = 1
+$px = 1
+$dpy = 0.2
+$dpx = 0.2
+
+do $sur = 1,$maxfl
+   do $wl = 1, $nwl
+      do $fi = 1, $nfi
+         do $p = -$py,$py, $dpy
+			$x = [x s$sur f$fi w$wl 0 $p]   ! rx = 0, ry = $p
+            $y = [y s$sur f$fi w$wl 0 $p]
+			$z = [z s$sur f$fi w$wl 0 $p]
+            print &#39;format I3, I3, I3, F14.9 ,F14.9,F14.9,F14.9&#39; $sur $wl $fi $p $x $y $z  
+         enddo
+      enddo
+   enddo
+enddo
+!
+out t                   ! redirect output to terminal (windows)
+
+
+out fil C:\Work\OpTaliX\Test\ray_fan_px_all.txt   ! redirect output to file
+!
+do $sur = 1,$maxfl
+   do $wl = 1, $nwl
+      do $fi = 1, $nfi
+         do $p = -$px,$px, $dpx
+            $x = [x s$sur f$fi w$wl $p 0]
+			$y = [y s$sur f$fi w$wl $p 0]
+			$z = [z s$sur f$fi w$wl $p 0]
+            print &#39;format I3, I3, I3, F14.9, F14.9, F14.9, F14.9&#39; $sur $wl $fi $p $x $y $z  
+         enddo
+      enddo
+   enddo
+enddo
+!
+
+out t                   ! redirect output to terminal (windows)
+print &quot;finished px and py ray fans.&quot;
+
+
+
+out t                   ! redirect output to terminal (windows)
+
+
+print &quot;finished.&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>After this macro has been run within OpTaliX with the command “run L3D.mac” some files exists within the provided folder. These files are read by the python script below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+<span class="kn">from</span> <span class="nn">plotly.colors</span> <span class="kn">import</span> <span class="n">n_colors</span>
+<span class="kn">import</span> <span class="nn">time</span> 
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">find_nearest</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">array</span> <span class="o">-</span> <span class="n">value</span><span class="p">))</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">array</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+<span class="c1"># ===================================</span>
+<span class="c1">## settings:</span>
+    
+<span class="n">draw_sagittal</span> <span class="o">=</span> <span class="mi">0</span>          <span class="c1"># draw sagittal rays</span>
+
+<span class="n">Opacity</span> <span class="o">=</span> <span class="mf">0.15</span>             <span class="c1"># opacity of drawn &quot;glass&quot; surfaces</span>
+<span class="n">show_labels</span> <span class="o">=</span> <span class="mi">0</span>            <span class="c1"># show labels: very slow in pyvista</span>
+<span class="n">plot_edge</span> <span class="o">=</span> <span class="mi">1</span>              <span class="c1"># plot minimal edges of lenses, corresponds to : EDG si..sj lin</span>
+<span class="n">edge_type</span> <span class="o">=</span> <span class="s2">&quot;lin&quot;</span>          <span class="c1"># options: &quot;lin&quot;, &quot;rec&quot;, </span>
+<span class="n">draw_rays_prior1</span> <span class="o">=</span> <span class="mi">1</span>       <span class="c1"># draw rays prior to surface 1</span>
+<span class="n">thi_draw</span> <span class="o">=</span> <span class="mi">20</span>              <span class="c1"># draw rays prior to surface 1 for this length</span>
+<span class="n">draw_paraxial_data</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">create_gif</span> <span class="o">=</span> <span class="mi">0</span>             <span class="c1"># generate a gif (of the rotating layout)</span>
+<span class="n">use_pythreejs</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># these are the files written by the macro &quot;L3D.mac&quot;:</span>
+<span class="n">filename_py</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Work\OpTaliX\Test\RAY_FAN_PY_ALL.txt&#39;</span>
+<span class="n">filename_px</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Work\OpTaliX\Test\RAY_FAN_PX_ALL.txt&#39;</span>
+<span class="n">filename_layout3D</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Work\OpTaliX\Test\LAYOUT_3D.txt&#39;</span>
+<span class="n">filename_sag</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Work\OpTaliX\Test\SAG.txt&#39;</span>
+<span class="c1"># ==================================</span>
+
+
+<span class="n">nsurfaces</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_py</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="n">max_rows</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">nwavelengths</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_py</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="n">max_rows</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">nfields</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_py</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="n">max_rows</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">stopsurface</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_py</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="n">max_rows</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="n">nwavelengths</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">wavelengths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_py</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="n">skiprows</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">max_rows</span><span class="o">=</span><span class="n">nwavelengths</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">wavelengths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_py</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="n">skiprows</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">max_rows</span><span class="o">=</span><span class="n">nwavelengths</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    
+<span class="n">fields</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_py</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="n">skiprows</span> <span class="o">=</span> <span class="mi">2</span><span class="o">+</span><span class="n">nwavelengths</span><span class="p">,</span> <span class="n">max_rows</span><span class="o">=</span><span class="n">nfields</span><span class="p">)</span>
+
+<span class="n">rayfandata_py</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_py</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="n">skiprows</span> <span class="o">=</span> <span class="n">nwavelengths</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="n">nfields</span><span class="p">)</span>
+
+
+<span class="n">rayfandata_px</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_px</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="n">skiprows</span> <span class="o">=</span> <span class="n">nwavelengths</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="n">nfields</span><span class="p">)</span>
+
+<span class="n">n_fields</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span>
+<span class="n">Lim</span> <span class="o">=</span> <span class="mf">0.02</span>    <span class="c1"># mm</span>
+<span class="c1">#nwavelengths = 3</span>
+
+
+<span class="n">rayfandata_px_L</span><span class="o">=</span> <span class="p">[]</span>
+<span class="n">rayfandata_py_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">rayfandata_PY0_L</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nsurfaces</span><span class="p">):</span>
+    <span class="n">rayfandata_px_LL</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">rayfandata_py_LL</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">rayfandata_px00</span> <span class="o">=</span> <span class="n">rayfandata_px</span><span class="p">[</span><span class="n">rayfandata_px</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">rayfandata_py00</span> <span class="o">=</span> <span class="n">rayfandata_py</span><span class="p">[</span><span class="n">rayfandata_py</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>                 <span class="c1"># select data by wavelength</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nwavelengths</span><span class="p">):</span>
+        <span class="c1">#print(&quot;w = &quot;, w)</span>
+        <span class="n">rayfandata_px_LLL</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">rayfandata_py_LLL</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">rayfandata_px0</span> <span class="o">=</span> <span class="n">rayfandata_px00</span><span class="p">[</span><span class="n">rayfandata_px00</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">w</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">rayfandata_py0</span> <span class="o">=</span> <span class="n">rayfandata_py00</span><span class="p">[</span><span class="n">rayfandata_py00</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">w</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>                 <span class="c1"># select data by wavelength</span>
+        
+    
+        
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_fields</span><span class="p">):</span>
+            <span class="n">rayfandata_px_LLL</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rayfandata_px0</span><span class="p">[</span><span class="n">rayfandata_px0</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">rayfandata_py_LLL</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rayfandata_py0</span><span class="p">[</span><span class="n">rayfandata_py0</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span>           <span class="c1"># select data by field</span>
+            
+        <span class="n">rayfandata_px_LL</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rayfandata_px_LLL</span><span class="p">))</span>
+        <span class="n">rayfandata_py_LL</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rayfandata_py_LLL</span><span class="p">))</span>
+        
+    <span class="n">rayfandata_px_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rayfandata_px_LL</span><span class="p">))</span>
+    <span class="n">rayfandata_py_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rayfandata_py_LL</span><span class="p">))</span>
+ 
+                
+
+<span class="c1">#filename_layout3D = r&#39;C:\Work\OpTaliX\Test\LAYOUT_3D.txt&#39;</span>
+<span class="n">layout_3D_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_layout3D</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">layout_3D</span> <span class="o">=</span> <span class="n">layout_3D_0</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">thi</span> <span class="o">=</span> <span class="n">layout_3D_0</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># calculate starting points of fields</span>
+<span class="k">if</span> <span class="n">draw_rays_prior1</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+    
+    <span class="n">xypos0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">fields</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">*</span><span class="n">thi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="n">xyzpos0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">xypos0</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">xypos0</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xypos0</span><span class="p">))</span><span class="o">*</span><span class="n">thi</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span><span class="o">.</span><span class="n">T</span>
+    <span class="c1"># create vectors:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">mesh_prior1_L</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">mesh_prior1x_L</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nwavelengths</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_fields</span><span class="p">):</span>
+            
+            <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rayfandata_py_L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">])):</span> 
+                <span class="n">pos1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">rayfandata_py_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="n">rayfandata_py_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="p">,</span> <span class="n">rayfandata_py_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span><span class="o">+</span> <span class="n">layout_3D</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span><span class="o">.</span><span class="n">T</span> 
+                <span class="n">vec</span> <span class="o">=</span> <span class="n">pos1</span><span class="o">-</span><span class="n">xyzpos0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">vec</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
+                <span class="n">vec</span> <span class="o">*=</span> <span class="n">thi_draw</span> 
+                <span class="n">pos0</span> <span class="o">=</span> <span class="n">pos1</span> <span class="o">+</span> <span class="n">vec</span>
+                <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">mesh_prior1</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">pos0</span><span class="p">,</span><span class="n">pos1</span><span class="p">]))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">mesh_prior1</span> <span class="o">+=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">pos0</span><span class="p">,</span><span class="n">pos1</span><span class="p">]))</span>
+                    
+            <span class="k">if</span> <span class="n">draw_sagittal</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rayfandata_px_L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">])):</span> 
+                    <span class="n">pos1x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">rayfandata_px_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="n">rayfandata_px_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="p">,</span> <span class="n">rayfandata_px_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span><span class="o">+</span> <span class="n">layout_3D</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span><span class="o">.</span><span class="n">T</span> 
+                    <span class="n">vecx</span> <span class="o">=</span> <span class="n">pos1x</span><span class="o">-</span><span class="n">xyzpos0</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                    <span class="n">vecx</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vecx</span><span class="p">)</span>
+                    <span class="n">vecx</span> <span class="o">*=</span> <span class="n">thi_draw</span> 
+                    <span class="n">pos0x</span> <span class="o">=</span> <span class="n">pos1x</span> <span class="o">+</span> <span class="n">vecx</span>
+                    <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">mesh_prior1x</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">pos0x</span><span class="p">,</span><span class="n">pos1x</span><span class="p">]))</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">mesh_prior1x</span> <span class="o">+=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">pos0x</span><span class="p">,</span><span class="n">pos1x</span><span class="p">]))</span>
+                        
+                    
+            <span class="n">mesh_prior1_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_prior1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">draw_sagittal</span><span class="p">:</span>
+                <span class="n">mesh_prior1x_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_prior1x</span><span class="p">)</span>
+                
+<span class="c1">#filename_sag = r&#39;C:\Work\OpTaliX\Test\SAG.txt&#39;</span>
+<span class="n">sag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename_sag</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> 
+
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="n">sag_data_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mesh_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mesh_prof_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mesh_prof_Ly</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mesh_circ_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Z0</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">circle_points</span><span class="p">(</span><span class="n">R</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="c1">#F = x**2 + y**2</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+
+<span class="n">sag_data_stop</span> <span class="o">=</span> <span class="n">sag</span><span class="p">[</span><span class="n">sag</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">stopsurface</span><span class="p">]</span>
+<span class="n">r_stop</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">sag_data_stop</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">n_mat</span> <span class="o">=</span> <span class="n">layout_3D</span><span class="p">[:,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="n">r_max_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">points_circ_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">points_circ_L2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">surf_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">points_label_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">r_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nsurfaces</span><span class="p">):</span>
+    
+    <span class="n">sag_data</span> <span class="o">=</span> <span class="n">sag</span><span class="p">[</span><span class="n">sag</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">sag_data_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sag_data</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">sag_data</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">r_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="c1">#if n_mat[s-1] &gt; 1:</span>
+    <span class="c1">#   r2 = r_L[s-1]</span>
+        
+    <span class="n">r_max_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
+    <span class="n">R</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+    <span class="c1"># Express the mesh in the cartesian system.</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">P</span><span class="p">),</span> <span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+    
+    <span class="n">x_c</span><span class="p">,</span> <span class="n">y_c</span><span class="o">=</span> <span class="n">circle_points</span><span class="p">(</span><span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
+    <span class="c1">#if n_mat[s-1] &gt; 1:</span>
+    <span class="c1">#    x_c, y_c= circle_points(R = np.max(r2))</span>
+    <span class="n">sa</span> <span class="o">=</span> <span class="n">sag_data</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">sa</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:],</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">layout_3D</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">X</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">Y</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">Z</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()))</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span><span class="o">.</span><span class="n">delaunay_2d</span><span class="p">()</span>
+    <span class="n">mesh_prof_x</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">r</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)),</span> <span class="n">sa</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span> <span class="n">layout_3D</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">mesh_prof_y</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)),</span> <span class="n">r</span><span class="p">,</span> <span class="n">sa</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span> <span class="n">layout_3D</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">points_circ</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">x_c</span><span class="p">,</span> <span class="n">y_c</span><span class="p">,</span> <span class="n">layout_3D</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_c</span><span class="p">))</span><span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span> <span class="p">))</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">mesh_circ</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">points_circ</span><span class="p">)</span>
+    <span class="n">mesh_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
+    <span class="n">mesh_prof_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_prof_x</span><span class="p">)</span>
+    <span class="n">mesh_prof_Ly</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_prof_y</span><span class="p">)</span>
+    <span class="n">mesh_circ_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_circ</span><span class="p">)</span>
+    <span class="n">points_circ_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">points_circ</span><span class="p">)</span>
+    <span class="n">points_circ_L2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">points_circ</span><span class="p">)</span>
+    
+    <span class="n">points_label_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">points_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">points_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span><span class="p">)])</span>
+
+<span class="n">atest</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">points_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">])),</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">points_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">])),</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">points_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">]))))</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="n">points_element_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nsurfaces</span><span class="p">):</span>    
+    <span class="k">if</span> <span class="n">n_mat</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">edge_type</span> <span class="o">==</span> <span class="s2">&quot;lin&quot;</span><span class="p">:</span>
+            <span class="n">points_element</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">points_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">],</span> <span class="n">points_circ_L</span><span class="p">[</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">))</span>
+            
+            <span class="n">pointsc</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points_element</span><span class="p">)</span>
+            <span class="n">surf</span> <span class="o">=</span> <span class="n">pointsc</span><span class="o">.</span><span class="n">delaunay_2d</span><span class="p">()</span><span class="c1">#.reconstruct_surface()</span>
+            <span class="n">surf_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">surf</span><span class="p">)</span>
+            
+        <span class="k">elif</span> <span class="n">edge_type</span> <span class="o">==</span> <span class="s2">&quot;rec&quot;</span><span class="p">:</span>
+            <span class="n">sa</span> <span class="o">=</span> <span class="n">sag_data_L</span><span class="p">[</span><span class="n">s</span><span class="p">][:,</span><span class="mi">2</span><span class="p">:]</span>
+            <span class="n">sa2</span> <span class="o">=</span> <span class="n">sag_data_L</span><span class="p">[</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">2</span><span class="p">:]</span>
+            
+            <span class="n">M1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span>
+            <span class="n">M2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">sa2</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">sa2</span><span class="p">)</span>
+            <span class="c1">#print(M1-M2)</span>
+            
+            <span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">points_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">])</span>
+            <span class="n">surf</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extrude</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">M2</span><span class="o">-</span><span class="n">M1</span><span class="o">+</span><span class="n">thi</span><span class="p">[</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">),</span> <span class="n">capping</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">mesh_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">+=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">points_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">+</span><span class="n">atest</span><span class="o">*</span><span class="p">(</span><span class="n">M2</span><span class="o">-</span><span class="n">M1</span><span class="o">+</span><span class="n">thi</span><span class="p">[</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">]))</span>
+            <span class="n">surf_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">surf</span><span class="p">)</span>
+    <span class="c1">#Z0+= layout_3D[i,3]</span>
+
+
+<span class="c1">#for s in range(0, nsurfaces):</span>
+<span class="c1">#    if n_mat[s]&gt;1:</span>
+    
+<span class="n">s</span> <span class="o">=</span><span class="mi">1</span>
+<span class="n">sag_data</span> <span class="o">=</span> <span class="n">sag</span><span class="p">[</span><span class="n">sag</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sag_data2</span> <span class="o">=</span> <span class="n">sag</span><span class="p">[</span><span class="n">sag</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">]</span>
+<span class="n">sag_data_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sag_data</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">sag_data2</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">sa</span> <span class="o">=</span> <span class="n">sag_data</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:]</span>
+<span class="n">x_c</span><span class="p">,</span> <span class="n">y_c</span><span class="o">=</span> <span class="n">circle_points</span><span class="p">(</span><span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>    
+<span class="n">points_circ</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">x_c</span><span class="p">,</span> <span class="n">y_c</span><span class="p">,</span> <span class="n">layout_3D</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_c</span><span class="p">))</span><span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span> <span class="p">))</span><span class="o">.</span><span class="n">T</span>
+<span class="n">points_circ_Lt</span> <span class="o">=</span> <span class="n">points_circ</span>
+<span class="n">points_element</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">points_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">],</span> <span class="n">points_circ_Lt</span><span class="p">))</span>
+<span class="n">pointsc</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points_element</span><span class="p">)</span>
+<span class="n">surf</span> <span class="o">=</span> <span class="n">pointsc</span><span class="o">.</span><span class="n">delaunay_2d</span><span class="p">()</span>
+
+
+<span class="n">mesh_ray_Ly</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">points_Ly</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mesh_p_L</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">mesh_ray_Lx</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mesh_p_L_x</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nwavelengths</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_fields</span><span class="p">):</span>
+        
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rayfandata_py_L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">])):</span> 
+            <span class="n">ray</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">ray_x</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nsurfaces</span><span class="p">):</span>
+                <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">rayfandata_py_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="n">rayfandata_py_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="p">,</span> <span class="n">rayfandata_py_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span><span class="o">+</span> <span class="n">layout_3D</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span><span class="o">.</span><span class="n">T</span>
+                <span class="n">ray</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+                
+                
+            <span class="n">ray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ray</span><span class="p">)</span>
+            <span class="n">mesh_ray</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">ray</span><span class="p">)</span>
+            <span class="n">mesh_p0</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">ray</span><span class="p">)</span>
+            
+
+            
+            <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">mesh_ray_g</span> <span class="o">=</span> <span class="n">mesh_ray</span>
+                <span class="n">mesh_p</span> <span class="o">=</span> <span class="n">mesh_p0</span>
+                
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">mesh_ray_g</span> <span class="o">+=</span> <span class="n">mesh_ray</span>
+                <span class="n">mesh_p</span> <span class="o">+=</span> <span class="n">mesh_p0</span>
+                
+
+                
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rayfandata_px_L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">])):</span> 
+            <span class="n">ray_x</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nsurfaces</span><span class="p">):</span>
+                <span class="n">r_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">((</span><span class="n">rayfandata_px_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="n">rayfandata_px_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="p">,</span> <span class="n">rayfandata_px_L</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">w</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span><span class="o">+</span> <span class="n">layout_3D</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span><span class="o">.</span><span class="n">T</span>
+                <span class="n">ray_x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_x</span><span class="p">)</span>
+            <span class="n">ray_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ray_x</span><span class="p">)</span>
+            <span class="n">mesh_ray_x</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">ray_x</span><span class="p">)</span>
+            <span class="n">mesh_p0_x</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">ray_x</span><span class="p">)</span>
+            
+            <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">mesh_ray_g_x</span> <span class="o">=</span> <span class="n">mesh_ray_x</span>
+                <span class="n">mesh_p_x</span> <span class="o">=</span> <span class="n">mesh_p0_x</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">mesh_ray_g_x</span> <span class="o">+=</span> <span class="n">mesh_ray_x</span>
+                <span class="n">mesh_p_x</span> <span class="o">+=</span> <span class="n">mesh_p0_x</span>
+                
+        <span class="n">mesh_ray_Ly</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_ray_g</span><span class="p">)</span>
+        <span class="n">mesh_p_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_p</span><span class="p">)</span>
+        
+        <span class="n">mesh_ray_Lx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_ray_g_x</span><span class="p">)</span>
+        <span class="n">mesh_p_L_x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_p_x</span><span class="p">)</span>
+
+
+
+<span class="c1"># get refractive index / material</span>
+<span class="c1"># fill volume between surfaces with glass.</span>
+    
+   
+<span class="kn">from</span> <span class="nn">pyvistaqt</span> <span class="kn">import</span> <span class="n">BackgroundPlotter</span>
+
+<span class="k">if</span> <span class="s1">&#39;pl&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">():</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="k">if</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">create_gif</span><span class="p">:</span>
+        <span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">off_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1">#pl = BackgroundPlotter(shape=(1, 1))</span>
+        <span class="n">pl</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+        <span class="c1">#pl = pv.PlotterITK()</span>
+    
+    <span class="c1">#pl = pv.Plotter(shape=(1, 1))</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">set_background</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>  <span class="c1"># &quot;gray&quot;, top=&quot;black&quot;</span>
+    <span class="c1">#plotter.subplot(0, 0)</span>
+    <span class="n">Colorline</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span>
+    <span class="n">pv</span><span class="o">.</span><span class="n">create_axes_orientation_box</span><span class="p">(</span><span class="n">line_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">text_scale</span><span class="o">=</span><span class="mf">0.366667</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="n">Colorline</span><span class="p">,</span> <span class="n">x_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">z_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="n">zlabel</span><span class="o">=</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="n">x_face_color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">y_face_color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">z_face_color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">color_box</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">label_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">labels_off</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">add_axes</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="n">Colorline</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">add_bounding_box</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">Colorline</span><span class="p">,</span> <span class="n">corner_factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">render_lines_as_tubes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reset_camera</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">outline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">culling</span><span class="o">=</span><span class="s1">&#39;front&#39;</span><span class="p">)</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">show_bounds</span><span class="p">(</span><span class="n">font_size</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">Colorline</span><span class="p">)</span>
+<span class="c1">#plotter.show()</span>
+
+
+
+
+<span class="n">poly</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">points_label_L</span><span class="p">))</span>
+<span class="n">poly</span><span class="p">[</span><span class="s2">&quot;My Labels&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">poly</span><span class="o">.</span><span class="n">n_points</span><span class="p">)]</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nsurfaces</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n_mat</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span> <span class="c1">#or n_mat[s-1]&gt;1:</span>
+        <span class="n">color_aper</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
+        <span class="n">color_aper</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">color_aper</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
+        
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">stopsurface</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">color_aper</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span>
+        <span class="n">Linewidth</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">Linewidth</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">nsurfaces</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">colorS</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span>
+        <span class="n">ac1</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_L</span><span class="p">[</span><span class="n">s</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colorS</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n_mat</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">colorS</span> <span class="o">=</span> <span class="s2">&quot;cyan&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">colorS</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span>
+        <span class="n">ac1</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_L</span><span class="p">[</span><span class="n">s</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="n">Opacity</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colorS</span><span class="p">)</span>
+    <span class="n">ac2</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_prof_L</span><span class="p">[</span><span class="n">s</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">ac3</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_prof_Ly</span><span class="p">[</span><span class="n">s</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">ac4</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_circ_L</span><span class="p">[</span><span class="n">s</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color_aper</span><span class="p">,</span> <span class="n">line_width</span> <span class="o">=</span> <span class="n">Linewidth</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">show_labels</span><span class="p">:</span>
+        <span class="n">pl</span><span class="o">.</span><span class="n">add_point_labels</span><span class="p">(</span><span class="n">poly</span><span class="p">,</span> <span class="s2">&quot;My Labels&quot;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span>
+
+
+<span class="n">cm_subsection</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">n_fields</span><span class="p">)</span> 
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;magenta&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">mesh_ray_Ly</span><span class="p">)):</span>    
+    <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_ray_Ly</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_p_L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    
+    <span class="k">if</span> <span class="n">draw_rays_prior1</span><span class="p">:</span>
+       <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_prior1_L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        
+<span class="k">if</span> <span class="n">draw_sagittal</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">mesh_ray_Lx</span><span class="p">)):</span>       
+        <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_ray_Lx</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_p_L_x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        
+        <span class="k">if</span> <span class="n">draw_rays_prior1</span><span class="p">:</span>
+            <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh_prior1x_L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">show_edges</span><span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>    
+
+<span class="k">if</span> <span class="n">plot_edge</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">surf_L</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">use_pythreejs</span><span class="p">:</span>
+
+            <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">surf_L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="n">Opacity</span><span class="p">)</span>  <span class="c1">#  roughness=0, metallic=0.5</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pl</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">surf_L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="n">opacity</span> <span class="o">=</span> <span class="n">Opacity</span><span class="p">)</span>
+        
+    <span class="c1">#pl.add_mesh(points_circ_Lt, color = &#39;orange&#39;, opacity = Opacity)</span>
+    <span class="c1">#pl.add_mesh(surf, color = &#39;red&#39;, opacity = 1)</span>
+
+<span class="c1"># cpos = [</span>
+<span class="c1">#     (21.9930, 21.1810, -30.3780),</span>
+<span class="c1">#     (-1.1640, -1.3098, -0.1061),</span>
+<span class="c1">#     (0.8498, -0.2515, 0.4631),</span>
+<span class="c1"># ]</span>
+<span class="n">pl</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="s1">&#39;zy&#39;</span>   
+<span class="n">pl</span><span class="o">.</span><span class="n">enable_parallel_projection</span><span class="p">()</span>
+<span class="c1">#pl.enable_image_style()</span>
+<span class="c1">#pl.view_zy()</span>
+<span class="c1">#if not create_gif:</span>
+<span class="c1">#    pl.show(jupyter_backend=&#39;pythreejs&#39;)  # jupyter_backend=&#39;pythreejs&#39;</span>
+
+<span class="c1"># do some animation </span>
+<span class="n">rot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">36</span><span class="p">)</span>
+<span class="c1"># Open a gif</span>
+<span class="k">if</span> <span class="n">create_gif</span><span class="p">:</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="s2">&quot;rotate3D.gif&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rot</span><span class="p">)):</span>
+        <span class="n">pl</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">azimuth</span> <span class="o">=</span> <span class="n">rot</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;frame = &quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+        <span class="n">pl</span><span class="o">.</span><span class="n">write_frame</span><span class="p">()</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+    
+
+
+      
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Elapsed time: &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span><span class="o">-</span><span class="n">t0</span><span class="p">,</span> <span class="n">decimals</span> <span class="o">=</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot; s&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_19280</span>\<span class="mf">59985931.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="c1"># calculate starting points of fields</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span> <span class="k">if</span> <span class="n">draw_rays_prior1</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">103</span>     <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span> 
+<span class="g g-Whitespace">    </span><span class="mi">105</span>     <span class="n">xypos0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">fields</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">*</span><span class="n">thi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pyvista&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are different ways to generate a plot. Either from a .py script where you can use pyvista’s pv.Plotter or BackgroundPlotter to obtain an interactive plot within an extra window. These plots are not interactive within this jupyter notebook environement, however. The plots are inserted as here as simple images instead (first with lin. edge):</p>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/OpTaliX_python_interactive_3DLayout_5_0.png" src="_images/OpTaliX_python_interactive_3DLayout_5_0.png" />
+</div>
+</div>
+<p>And with rect edge:</p>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/OpTaliX_python_interactive_3DLayout_7_0.png" src="_images/OpTaliX_python_interactive_3DLayout_7_0.png" />
+</div>
+</div>
+<p>Within jupyter the backend “pythreejs” can be used:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">use_pythreejs</span><span class="p">:</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">jupyter_backend</span><span class="o">=</span><span class="s1">&#39;pythreejs&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">pl</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "122ce85450ab466b9d8f9a5fa9a74689", "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+<p>A gif can be generated as well and is inserted below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gif_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\herbst\.spyder-py3\Python Scripts\Optalix\rotate3D.gif&#39;</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="c1">#display(Image(data=open(gif_path,&#39;rb&#39;).read(), format=&#39;png&#39;))</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">gif_path</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;png&#39;</span><span class="p">))</span>
+
+<span class="c1">#import ipywidgets as widgets</span>
+<span class="c1">#display(widgets.HTML(f&#39;&lt;img src=&quot;{gif_path}&quot; width=&quot;750&quot; align=&quot;center&quot;&gt;&#39;))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/OpTaliX_python_interactive_3DLayout_11_0.png" src="_images/OpTaliX_python_interactive_3DLayout_11_0.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="OpTaliX_plotly_transverse_ray_fan.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.3. </span>OpTaliX: Transverse ray fan plot with Python (plotly)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="OpTaliX_markdown.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>OpTaliX</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By J. Herbst<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
