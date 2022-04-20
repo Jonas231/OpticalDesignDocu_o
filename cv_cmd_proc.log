@@ -1,0 +1,31 @@
+DEBUG:root:spec_data: INI [] ['OTX']
+DEBUG:root:spec_data: RDM [] []
+DEBUG:root:spec_data: LEN [] []
+DEBUG:root:spec_data: DIM [] ['M']
+DEBUG:root:pupil_spec_data: EPD 11.250000
+INFO:root:Line 6: Command IFO not supported
+INFO:root:Line 7: Command PUI not supported
+INFO:root:Line 8: Command PUX not supported
+INFO:root:Line 9: Command PUY not supported
+DEBUG:root:field_spec_data: XAN [] [0.0]
+DEBUG:root:field_spec_data: YAN [] [0.0]
+DEBUG:root:field_spec_data: WTF [] [100.0]
+INFO:root:glass AIR not found in ['CDGM', 'Hikari', 'Hoya', 'Ohara', 'Schott', 'Sumita']
+INFO:root:glass SILICA not found in ['CDGM', 'Hikari', 'Hoya', 'Ohara', 'Schott', 'Sumita']
+DEBUG:root:surface_data: STO [] []
+DEBUG:root:aperture_data: CIR [] [5.625]
+DEBUG:root:surface_data: ASP [] []
+DEBUG:root:profile_data: A [] [3.44e-05]
+DEBUG:root:profile_data: B [] [1.43e-07]
+DEBUG:root:profile_data: C [] [0.0]
+DEBUG:root:profile_data: D [] [0.0]
+DEBUG:root:profile_data: E [] [0.0]
+DEBUG:root:profile_data: F [] [0.0]
+DEBUG:root:profile_data: G [] [0.0]
+DEBUG:root:profile_data: H [] [0.0]
+DEBUG:root:profile_data: K [] [-0.67]
+DEBUG:root:surface_data: SLB [] ['AFL12-15']
+INFO:root:glass AIR not found in ['CDGM', 'Hikari', 'Hoya', 'Ohara', 'Schott', 'Sumita']
+DEBUG:root:aperture_data: CIR [] [6.25]
+INFO:root:Line 34: Command PIM not supported
+INFO:root:Line 35: Command GO not supported
