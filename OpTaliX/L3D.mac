@@ -1,0 +1,145 @@
+! Get 3D layout incl. rays
+!
+print "start."
+$maxfl = [si]           ! get number of surfaces
+!$sur = 2
+$wl = 1
+$fi = 1
+
+out fil C:\Work\OpTaliX\Test\layout_3D.txt   ! redirect output to file
+print "C sur vgx vgy vgz r x y n"
+
+do $sur = 0,$maxfl    ! loop through all surfaces
+   ! get vertex data
+   $vgx = [xsc s$sur]
+   $vgy = [ysc s$sur]
+   $vgz = [zsc s$sur]
+   $thi = [thi s$sur]
+      
+   ! get aperture data
+   $rmax = [sd s$sur]   ! Maximum semi-diameter on surface sk.
+   
+   ! get glass material, refractive index
+   $n = [ind s$sur w$wl]
+
+   print 'format I3,F14.9, F14.9, F14.9, F14.9, F14.9, G13.5' $sur $vgx $vgy $vgz $rmax $n $thi
+   
+enddo
+
+! get sag data, save in extra file
+! SAG sk x_height y_height 
+
+out fil C:\Work\OpTaliX\Test\sag.txt
+
+do $sur = 1,$maxfl
+   if ($sur > 0) then
+      $rmax = [sd s$sur] 
+      $dr = $rmax/20
+   
+      do $r = -$rmax,$rmax, $dr   ! loop through radial coordinate
+         $xh = $r
+         $sagx = [SAG s$sur $xh 0]
+         $sagy = [SAG s$sur 0 $xh]
+         print 'format I3, F14.9, F14.9, F14.9' $sur $r  $sagx $sagy
+      enddo
+   else
+      print 'format I3, F14.9, F14.9, F14.9' $sur 0  0 0
+   endif
+enddo
+
+! get homogeneous transformation data
+out fil C:\Work\OpTaliX\Test\TMAT.txt   ! redirect output to file
+
+do $sur = 1,$maxfl
+   TMAT s$sur
+enddo
+
+! get layout ray data
+!out fil C:\Work\OpTaliX\Test\layout_rays.txt   ! redirect output to file
+
+!$px = 0
+!$py = 1
+!do $sur = 1,$maxfl
+!   $y = [y s$sur f1 w1 $px $py]
+!   $x = [x s$sur f1 w1 $px $py]
+!   print 'format I3,F10.4, F10.4, F14.9,F14.9' $sur $px $py $x $y
+!enddo
+
+out t                   ! redirect output to terminal (windows)
+
+!#include C:\ProgramData\OpTaliX\macro\ray_fan.mac
+
+! #############################################################
+! Get transverse ray aberration fan data
+!
+print "start layout ray export..."
+
+$nfi = 4    ! number of fields defined
+$nwl = 1    ! number of fields defined
+$sf = [ss]
+
+out fil C:\Work\OpTaliX\Test\ray_fan_py_all.txt   ! redirect output to file
+
+print "C number of surfaces, number of wavelengths, number of fields, stop surface: "
+print $maxfl $nwl $nfi $sf
+
+do $wl = 1, $nwl
+	$wavelength = [WL w$wl]
+	print $wl $wavelength
+enddo
+
+do $fi = 1, $nfi
+	$fxan = [XAN f$fi]
+	$fyan = [YAN f$fi]
+	print 'format I3 F13.9 ,F13.9' $fi $fxan $fyan
+enddo
+!
+!$maxfl = [si]           ! get number of surfaces
+$py = 1
+$px = 1
+$dpy = 0.2
+$dpx = 0.2
+
+do $sur = 1,$maxfl
+   do $wl = 1, $nwl
+      do $fi = 1, $nfi
+         do $p = -$py,$py, $dpy
+			$x = [x s$sur f$fi w$wl 0 $p]   ! rx = 0, ry = $p
+            $y = [y s$sur f$fi w$wl 0 $p]
+			$z = [z s$sur f$fi w$wl 0 $p]
+            print 'format I3, I3, I3, F14.9 ,F14.9,F14.9,F14.9' $sur $wl $fi $p $x $y $z  
+         enddo
+      enddo
+   enddo
+enddo
+!
+out t                   ! redirect output to terminal (windows)
+
+
+out fil C:\Work\OpTaliX\Test\ray_fan_px_all.txt   ! redirect output to file
+!
+do $sur = 1,$maxfl
+   do $wl = 1, $nwl
+      do $fi = 1, $nfi
+         do $p = -$px,$px, $dpx
+            $x = [x s$sur f$fi w$wl $p 0]
+			$y = [y s$sur f$fi w$wl $p 0]
+			$z = [z s$sur f$fi w$wl $p 0]
+            print 'format I3, I3, I3, F14.9, F14.9, F14.9, F14.9' $sur $wl $fi $p $x $y $z  
+         enddo
+      enddo
+   enddo
+enddo
+!
+
+out t                   ! redirect output to terminal (windows)
+print "finished px and py ray fans."
+
+
+
+out t                   ! redirect output to terminal (windows)
+
+
+print "finished."
+
+

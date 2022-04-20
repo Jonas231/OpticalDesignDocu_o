@@ -41,6 +41,8 @@ parts:
       sections:
       - file: OpTaliX_setup_model_example_python
       - file: OpTaliX_plotly_spot_diagram
+      - file: OpTaliX_plotly_transverse_ray_fan
+      - file: OpTaliX_python_interactive_3DLayout
     - file: OpTaliX_markdown
       sections:
       - file: OpTaliX_variables
