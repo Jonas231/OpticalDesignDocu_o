@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.10. OpTaliX: Tolerance and Sensitivity Analysis &#8212; OpticalDesignDocu</title>
+    <title>&lt;no title&gt; &#8212; OpticalDesignDocu</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -48,10 +48,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2.11. OpTaliX: Illumination source data" href="OpTaliX_Illuminantion_source_data.html" />
-    <link rel="prev" title="2.9. OpTaliX: Polarization" href="OpTaliX_polarization.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -201,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
   OpTaliX
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="OpTaliX_setup_model.html">
    1. Setup of Model
@@ -224,16 +224,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="OpTaliX_markdown.html">
    2. OpTaliX
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="OpTaliX_variables.html">
      2.1. OpTaliX: Optimization Variables
@@ -279,8 +279,8 @@ const thebe_selector_output = ".output, .cell_output"
      2.9. OpTaliX: Polarization
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Tolerance_sensitivity.html">
      2.10. OpTaliX: Tolerance and Sensitivity Analysis
     </a>
    </li>
@@ -434,7 +434,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/OpTaliX_Tolerance_sensitivity.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Untitled4.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -454,7 +454,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FOpTaliX_Tolerance_sensitivity.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUntitled4.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -470,28 +470,19 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/OpTaliX_Tolerance_sensitivity.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -499,93 +490,26 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>OpTaliX: Tolerance and Sensitivity Analysis</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="optalix-tolerance-and-sensitivity-analysis">
-<h1><span class="section-number">2.10. </span>OpTaliX: Tolerance and Sensitivity Analysis<a class="headerlink" href="#optalix-tolerance-and-sensitivity-analysis" title="Permalink to this headline">¶</a></h1>
-<p>These are …</p>
-<div class="cell tag_remove_input docutils container">
-<div class="cell_output docutils container">
-<script type="application/javascript">if (typeof require !== 'undefined')
-    require.config({
-        paths: {
-            jquery: 'https://code.jquery.com/jquery-3.5.1.min',
-            datatables: 'https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min',
-        }
-    });
-</script></div>
-</div>
-<div class="cell tag_remove_input docutils container">
-</div>
-<div class="cell tag_remove_input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><table id="aee0a4c0-1906-4c52-841a-62bd35c1fa7c" class="display"style="max-width:100%"><thead><th></th><th>Description</th><th>Order</th></thead><tbody><tr><td>Loading... (need <a href=https://mwouts.github.io/itables/troubleshooting.html>help</a>?)</td></tr></tbody></table>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
-<style> table td {
-    text-overflow: ellipsis;
-    overflow: hidden;
-} </style>
-<style> table th {
-    text-overflow: ellipsis;
-    overflow: hidden;
-} </style>
-<script type="module">
-    // Define the table data
-    const data = [["TSF [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on test-plate fit. Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command DLF.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes DLF 2.0 (fringes) for calculating tolerance sensitivity TSF.", 1], ["TSI [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on surface irregularity. Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command IRR.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes IRR 0.4 (fringes) for calculating tolerance sensitivity TSI.", 2], ["TST [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on thickness. Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command DLT.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes DLT 0.02 for calculating tolerance sensitivity TST.", 3], ["TSN [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on index of refraction. Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command DLN.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes DLN 0.001 for calculating tolerance sensitivity TSN.", 4], ["TSV [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on Abbe number. Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command DLV.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes DLV 0.8 (\\%) for calculating tolerance sensitivity TSV.", 5], ["TSX [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on X-decenter. Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command DLX.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes DLX 0.02 (mm) for calculating tolerance sensitivity TSX.", 6], ["TSY [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on Y-decenter. Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command DLY.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes DLY 0.02 (mm) for calculating tolerance sensitivity TSY.", 7], ["TSZ [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on Z-decenter. Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command DLZ.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes DLZ 0.05 (mm) for calculating tolerance sensitivity TSZ.", 8], ["TSA [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on a-tilt (about X-axis). Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command DLA.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes DLA 5 (arcmin) for calculating tolerance sensitivity TSZ.", 9], ["TSB [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on b-tilt (about Y-axis). Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command DLB.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes DLA 5 (arcmin) for calculating tolerance sensitivity TSB.", 10], ["TSG [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on g-tilt (about Z-axis). Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command DLG.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes DLG 5 (arcmin) for calculating tolerance sensitivity TSG.", 11], ["TSH [fk|fi..j wk|wi..j] sk|si..j ", "Tolerance sensitivity on index homogeneity. Assumes that a tolerance has been defined on the corresponding surface in the tolerance editor. See the command HOM.If a tolerance on this parameter has not been defined in the tolerance editor, the program assumes HOM 50*10-6 for calculating tolerance sensitivity TSH.", 12]];
-
-    if (typeof require === 'undefined') {
-        // TODO: This should become the default (use a simple import)
-        // when the ESM version works independently of whether
-        // require.js is there or not, see
-        // https://datatables.net/forums/discussion/69066/esm-es6-module-support?
-        const {default: $} = await import("https://esm.sh/jquery@3.5.0");
-        const {default: initDataTables} = await import("https://esm.sh/datatables.net@1.11.3?deps=jquery@3.5.0");
-
-        initDataTables();
-
-        // Define the dt_args
-        let dt_args = {"columnDefs": [{"className": "dt-left", "targets": "_all"}, {"width": "500px", "targets": 1}], "lengthMenu": [50, 100, 200, 500], "paging": false};
-        dt_args["data"] = data;
-
-        // Display the table
-        $(document).ready(function () {
-            $('#aee0a4c0-1906-4c52-841a-62bd35c1fa7c').DataTable(dt_args);
-        });
-    } else {
-        require(["jquery", "datatables"], ($, datatables) => {
-                // Define the dt_args
-                let dt_args = {"columnDefs": [{"className": "dt-left", "targets": "_all"}, {"width": "500px", "targets": 1}], "lengthMenu": [50, 100, 200, 500], "paging": false};
-                dt_args["data"] = data;
-
-                // Display the table
-                $(document).ready(function () {
-                    $('#aee0a4c0-1906-4c52-841a-62bd35c1fa7c').DataTable(dt_args);
-                });
-            }
-        )
-    }
-</script>
-</div></div>
-</div>
-<p>Using Tolerance Sensitivity Items in Optimization
-If optimizing (minimizing) for tolerance sensitivity, the various tolerance sensitivity items described in the previous section should be understood as aberrations added to the targets/constraints (merit function) list.</p>
-<p>See also the syntax for defining tolerance sensitivity. Here is a typical example in the optimization targets/constraints list:</p>
-<p>efl = 100  Focal length shall be exactly 100mm.<br />
-spd 0  Spot diameter (rms) shall be zero (minimized) for all fields, wavelengths, zoom positions.<br />
-tsa s1..5 f1..2 w1 0  Tolerance sensitivity on surface tilt about X-axis shall be minimized for surfaces 1-5, fields 1-2 and wavelength number 1.<br />
-tsy 0  Tolerance sensitivity on surface Y-decenter shall be minimized for all surfaces, all fields and all wavelengths defined in the optical system configuration.</p>
-<p>Note: Do not attempt to request a tolerance sensitivity item to become exactly zero, e.g. ‘TSA = 0’ as this is impossible on optical elements/surfaces that have optical effect. Instead minimize it by omitting the equal ‘=’ sign in the constraints definition, e.g. ‘TSA 0’.</p>
-</div>
-
+  
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -610,21 +534,7 @@ tsy 0  Tolerance sensitivity on surface Y-decenter shall be minimized for all su
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="OpTaliX_polarization.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2.9. </span>OpTaliX: Polarization</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="OpTaliX_Illuminantion_source_data.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.11. </span>OpTaliX: Illumination source data</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
