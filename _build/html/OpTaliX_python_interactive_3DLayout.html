@@ -50,7 +50,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. OpTaliX" href="OpTaliX_markdown.html" />
+    <link rel="next" title="2. Operands" href="OpTaliX_markdown.html" />
     <link rel="prev" title="1.3. OpTaliX: Transverse ray fan plot with Python (plotly)" href="OpTaliX_plotly_transverse_ray_fan.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -236,7 +236,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="OpTaliX_markdown.html">
-   2. OpTaliX
+   2. Operands
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -358,7 +358,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Code V
+  Code_V
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -697,7 +697,7 @@ print &quot;finished.&quot;
 <span class="c1"># ===================================</span>
 <span class="c1">## settings:</span>
     
-<span class="n">draw_sagittal</span> <span class="o">=</span> <span class="mi">0</span>          <span class="c1"># draw sagittal rays</span>
+<span class="n">draw_sagittal</span> <span class="o">=</span> <span class="mi">1</span>          <span class="c1"># draw sagittal rays</span>
 
 <span class="n">Opacity</span> <span class="o">=</span> <span class="mf">0.15</span>             <span class="c1"># opacity of drawn &quot;glass&quot; surfaces</span>
 <span class="n">show_labels</span> <span class="o">=</span> <span class="mi">0</span>            <span class="c1"># show labels: very slow in pyvista</span>
@@ -1112,31 +1112,30 @@ print &quot;finished.&quot;
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_19280</span>\<span class="mf">59985931.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="c1"># calculate starting points of fields</span>
-<span class="g g-Whitespace">    </span><span class="mi">102</span> <span class="k">if</span> <span class="n">draw_rays_prior1</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">103</span>     <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span> 
-<span class="g g-Whitespace">    </span><span class="mi">105</span>     <span class="n">xypos0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">fields</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">*</span><span class="n">thi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_10648</span>\<span class="mf">3795981473.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">    </span><span class="mi">312</span> 
+<span class="g g-Whitespace">    </span><span class="mi">313</span> 
+<span class="ne">--&gt; </span><span class="mi">314</span> <span class="kn">from</span> <span class="nn">pyvistaqt</span> <span class="kn">import</span> <span class="n">BackgroundPlotter</span>
+<span class="g g-Whitespace">    </span><span class="mi">315</span> 
+<span class="g g-Whitespace">    </span><span class="mi">316</span> <span class="k">if</span> <span class="s1">&#39;pl&#39;</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">():</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pyvista&#39;
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pyvistaqt&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>There are different ways to generate a plot. Either from a .py script where you can use pyvista’s pv.Plotter or BackgroundPlotter to obtain an interactive plot within an extra window. These plots are not interactive within this jupyter notebook environement, however. The plots are inserted as here as simple images instead (first with lin. edge):</p>
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/OpTaliX_python_interactive_3DLayout_5_0.png" src="_images/OpTaliX_python_interactive_3DLayout_5_0.png" />
 </div>
 </div>
-<p>And with rect edge:</p>
+<p>And with lin. edge:</p>
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
 <img alt="_images/OpTaliX_python_interactive_3DLayout_7_0.png" src="_images/OpTaliX_python_interactive_3DLayout_7_0.png" />
 </div>
 </div>
-<p>Within jupyter the backend “pythreejs” can be used:</p>
+<p>Within jupyter the backend “pythreejs” can be used (here also a sagittal ray fan is plotted):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">use_pythreejs</span><span class="p">:</span>
@@ -1148,7 +1147,7 @@ print &quot;finished.&quot;
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "122ce85450ab466b9d8f9a5fa9a74689", "version_major": 2, "version_minor": 0}
+{"model_id": "88f394dab9ab4fd993895c11262564d9", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
 <p>A gif can be generated as well and is inserted below:</p>
@@ -1207,7 +1206,7 @@ print &quot;finished.&quot;
     <a class='right-next' id="next-link" href="OpTaliX_markdown.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>OpTaliX</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Operands</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

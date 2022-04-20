@@ -42,7 +42,7 @@ def find_nearest(array, value):
 # ===================================
 ## settings:
     
-draw_sagittal = 0          # draw sagittal rays
+draw_sagittal = 1          # draw sagittal rays
 
 Opacity = 0.15             # opacity of drawn "glass" surfaces
 show_labels = 0            # show labels: very slow in pyvista
@@ -452,10 +452,8 @@ if create_gif:
     
 print("Elapsed time: ", np.round(time.perf_counter()-t0, decimals = 4), " s")
 
-
-# There are different ways to generate a plot. Either from a .py script where you can use pyvista's pv.Plotter or BackgroundPlotter to obtain an interactive plot within an extra window. These plots are not interactive within this jupyter notebook environement, however. The plots are inserted as here as simple images instead (first with lin. edge):
-
-# In[74]:
+There are different ways to generate a plot. Either from a .py script where you can use pyvista's pv.Plotter or BackgroundPlotter to obtain an interactive plot within an extra window. These plots are not interactive within this jupyter notebook environement, however. The plots are inserted as here as simple images instead (first with rect. edge):
+# In[80]:
 
 
 PATH = r'C:\Users\herbst\OpticalDesignDocu'
@@ -463,9 +461,9 @@ from IPython.display import Image
 Image(filename = PATH + "\OpTaliX\OpTaliX_3D_rect.png", width=1000, height=800)
 
 
-# And with rect edge:
+# And with lin. edge:
 
-# In[75]:
+# In[81]:
 
 
 PATH = r'C:\Users\herbst\OpticalDesignDocu'
@@ -473,9 +471,9 @@ from IPython.display import Image
 Image(filename = PATH + "\OpTaliX\OpTaliX_3D_lint.png", width=1000, height=800)
 
 
-# Within jupyter the backend "pythreejs" can be used:
+# Within jupyter the backend "pythreejs" can be used (here also a sagittal ray fan is plotted):
 
-# In[76]:
+# In[82]:
 
 
 if use_pythreejs:
@@ -486,7 +484,7 @@ else:
 
 # A gif can be generated as well and is inserted below:
 
-# In[77]:
+# In[83]:
 
 
 gif_path = r'C:\Users\herbst\.spyder-py3\Python Scripts\Optalix\rotate3D.gif'

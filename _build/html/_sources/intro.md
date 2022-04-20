@@ -17,3 +17,6 @@ Please check out the following pages.
 
 ```{tableofcontents}
 ```
+
+The source of this book is located here:
+[Source](https://github.com/Jonas231/OpticalDesignDocu_o)
