@@ -72,8 +72,8 @@ parts:
     - file: ZEMAX_markdown
     - file: ZEMAX_links
       #sections:
-  - caption: Code V 
-    numbered: True  # Only applies to chapters in Part 1
+  - caption: Code_V 
+    numbered: True  # Only applies to chapters in Part 1    
     chapters:
     - file: CodeV_markdown
       #sections:
