@@ -20,3 +20,5 @@ Please check out the following pages.
 
 The source of this book is located here:
 [Source](https://github.com/Jonas231/OpticalDesignDocu_o)
+
+The generated jupyter book sits here: https://jonas231.github.io/OpticalDesignDocu_o/
