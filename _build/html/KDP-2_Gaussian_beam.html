@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; OpticalDesignDocu</title>
+    <title>2.4. Gaussian beam raytracing in KDP-2 / Koko &#8212; OpticalDesignDocu</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -48,10 +48,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Operands" href="KDP-2_markdown.html" />
+    <link rel="prev" title="2.3. Create spot diagram and plot with python" href="KDP-2_spot_diagram_matplotlib.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,22 +100,22 @@ const thebe_selector_output = ".output, .cell_output"
   KDP-2
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="KDP-2_about.html">
    1. About KDP-2
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="KDP-2_setup_model.html">
    2. Setup of Model
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="KDP-2_setup_model_commands.html">
      2.1. Commands
@@ -129,6 +129,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="KDP-2_spot_diagram_matplotlib.html">
      2.3. Create spot diagram and plot with python
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.4. Gaussian beam raytracing in KDP-2 / Koko
     </a>
    </li>
   </ul>
@@ -230,6 +235,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="OpTaliX_python_interactive_3DLayout.html">
      1.4. OpTaliX: Interactive 3D layout with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Gaussian_beam_example.html">
+     1.5. Gaussian beam raytracing and propagation in OpTaliX
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_CodeV_RayOptics.html">
+     1.6. OpTaliX to CodeV to RayOptics / Rayopt
     </a>
    </li>
   </ul>
@@ -362,9 +377,53 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="CodeV_setup_model.html">
+   1. Setup of Model
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_setup_model_example_python.html">
+     1.1. Setup a Cooke triplet macro with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_Gaussian_beam_tracing.html">
+     1.2. Gaussian beam tracing in CodeV
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="CodeV_markdown.html">
-   1. Code V
+   2. Code V
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_operands_optical_database_information.html">
+     2.1. Optical Database Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_operands_variables.html">
+     2.2. Variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CodeV_links.html">
+   3. Code V: links
   </a>
  </li>
 </ul>
@@ -386,10 +445,27 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="Comparison_markdown.html">
    1. Comparison
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Comparison_opt_sensitivity.html">
+     1.1. Comparison: Optimization for reduced tolerance sensitivity / maximum production yield
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Comparison_Gaussian_beams.html">
+     1.2. Comparison: Gaussian beam propagation features
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -502,14 +578,6 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -517,26 +585,39 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Gaussian beam raytracing in KDP-2 / Koko</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  
+  <div class="section" id="gaussian-beam-raytracing-in-kdp-2-koko">
+<h1><span class="section-number">2.4. </span>Gaussian beam raytracing in KDP-2 / Koko<a class="headerlink" href="#gaussian-beam-raytracing-in-kdp-2-koko" title="Permalink to this headline">¶</a></h1>
+<p>How is Gaussian beam tracing performed in KDP-2? See this note of the manual:</p>
+<p>“In many optical design and analysis programs, gaussian beam propagation is based upon a paraxial ray trace. This method is fast and
+simple but leaves much to be desired. The “paraxial” method can’t be used in “decentered” optical system or in systems which contain
+diffractive optical elements. This program does not use this simplistic “paraxial” method but instead uses the “generalized paraxial ray
+trace” described earlier in this manual section. In the form of the “generalized paraxial ray trace” used for gaussian beam propagation, the
+gaussian beam divergence half-angle plays the role of a field angle to define the “generalized paraxial chief rays” and the gaussian beam
+semi-diameter on surface 1 plays the role of reference aperture height to define “generalized paraxial marginal rays”. If surface 1 is not the
+system “reference surface” then it is temporarily redefined to be the system “reference surface” for all gaussian beam calculations. A field-of-
+view specification in the gaussian beam analysis commands acts to re-define the reference optical axis of the system for that particular
+ray trace by defining a new wavefront origin location on surface 0. The ray tracing performed is always exact, real, trigonometric ray
+tracing. The “generalized paraxial ray trace” is simulated by tracing real rays close to the central reference axis ray. The central reference
+axis ray is the ray that starts at the specified wavefront origin position on surface 0 and passes through the center of surface 1 (or the center
+of the clear aperture assigned to surface 1).”</p>
+<p>A “generalized paraxial ray trace” = real differential raytrace:</p>
+<p>“Generalized paraxial data is generated by tracing real chief and marginal rays close to a chief ray and then scaling
+the resultant data up by the appropriate and current “SCX”, “SCY”, “SAX” and “SAY” values. For a centered systems with the reference
+surface assigned to the same surface as the aperture stop, a generalized paraxial ray trace along the optical axis will yield results identical
+to an ordinary first order paraxial ray trace.”</p>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -561,7 +642,21 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="KDP-2_spot_diagram_matplotlib.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2.3. </span>Create spot diagram and plot with python</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="KDP-2_markdown.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Operands</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

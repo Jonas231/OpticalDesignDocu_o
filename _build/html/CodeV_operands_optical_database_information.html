@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.1. Optical Database Information &#8212; OpticalDesignDocu</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.2. Variables" href="CodeV_operands_variables.html" />
+    <link rel="prev" title="2. Code V" href="CodeV_markdown.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">OpticalDesignDocu</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Optical Design Docu
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  KDP-2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="KDP-2_about.html">
+   1. About KDP-2
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="KDP-2_setup_model.html">
+   2. Setup of Model
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_setup_model_commands.html">
+     2.1. Commands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_setup_model_example_python.html">
+     2.2. Setup a Cooke triplet with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_spot_diagram_matplotlib.html">
+     2.3. Create spot diagram and plot with python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="KDP-2_markdown.html">
+   3. Operands
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_lens_data_base.html">
+     3.1. Lens database items
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_real_single_ray.html">
+     3.2. Real single ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_special_ray.html">
+     3.3. Special real / paraxial ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_aberrations.html">
+     3.4. Aberrations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_parax_ray.html">
+     3.5. Paraxial ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_paraxial_chromatic.html">
+     3.6. Paraxial chromatic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_spd_caf.html">
+     3.7. Spot diagram
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_spectrometer.html">
+     3.8. Spectrometer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_real_ray_composite.html">
+     3.9. Real ray composite
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_Gaussian_beam.html">
+     3.10. Gaussian beams
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  OpTaliX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="OpTaliX_setup_model.html">
+   1. Setup of Model
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_setup_model_example_python.html">
+     1.1. Setup a Cooke triplet with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_plotly_spot_diagram.html">
+     1.2. Interactive Python spot diagrams
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_plotly_transverse_ray_fan.html">
+     1.3. OpTaliX: Transverse ray fan plot with Python (plotly)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_python_interactive_3DLayout.html">
+     1.4. OpTaliX: Interactive 3D layout with Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="OpTaliX_markdown.html">
+   2. Operands
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_variables.html">
+     2.1. OpTaliX: Optimization Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_LDI_config.html">
+     2.2. OpTaliX: Lens data item configurations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_LDI_surface.html">
+     2.3. OpTaliX: Lens data items surface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_apertures.html">
+     2.4. OpTaliX: Apertures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Geometric%20Analysis.html">
+     2.5. OpTaliX: Geometric Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_optimization_operands.html">
+     2.6. OpTaliX: Optimization Targets  / Constraints
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_RayData.html">
+     2.7. OpTaliX: Ray data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_paraxial.html">
+     2.8. OpTaliX: Lens data items paraxial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_polarization.html">
+     2.9. OpTaliX: Polarization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Tolerance_sensitivity.html">
+     2.10. OpTaliX: Tolerance and Sensitivity Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Illuminantion_source_data.html">
+     2.11. OpTaliX: Illumination source data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Gaussian_beam.html">
+     2.12. OpTaliX: Gaussian beam
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_fiber_data.html">
+     2.13. OpTaliX: Fiber data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Diffraction_analysis.html">
+     2.14. OpTaliX: Diffraction analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_arrays.html">
+     2.15. OpTaliX: Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_miscellaneous.html">
+     2.16. OpTaliX: Miscellaneous
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  OSLO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="OSLO_markdown.html">
+   1. OSLO
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ZEMAX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZEMAX_markdown.html">
+   1. ZEMAX
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZEMAX_links.html">
+   2. ZEMAX links
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Code_V
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="CodeV_setup_model.html">
+   1. Setup of Model
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_setup_model_example_python.html">
+     1.1. Setup a Cooke triplet macro with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_Gaussian_beam_tracing.html">
+     1.2. Gaussian beam tracing in CodeV
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="CodeV_markdown.html">
+   2. Code V
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.1. Optical Database Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_operands_variables.html">
+     2.2. Variables
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Synopsys
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Synopsys_markdown.html">
+   1. SYNOPSYS
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Comparison
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Comparison_markdown.html">
+   1. Comparison
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Optical Design Practice
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="OpticDesign_markdown.html">
+   1. Optical Design Links
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/CodeV_operands_optical_database_information.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FCodeV_operands_optical_database_information.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/CodeV_operands_optical_database_information.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Optical Database Information</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="optical-database-information">
+<h1><span class="section-number">2.1. </span>Optical Database Information<a class="headerlink" href="#optical-database-information" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">itables</span>
+<span class="kn">from</span> <span class="nn">itables</span> <span class="kn">import</span> <span class="n">init_notebook_mode</span><span class="p">,</span> <span class="n">show</span>
+<span class="kn">import</span> <span class="nn">itables.options</span> <span class="k">as</span> <span class="nn">opt</span>
+
+<span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">all_interactive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">opt</span><span class="o">.</span><span class="n">lengthMenu</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span>
+<span class="c1">#opt.classes = [&quot;display&quot;, &quot;cell-border&quot;]</span>
+<span class="c1">#opt.classes = [&quot;display&quot;, &quot;nowrap&quot;]</span>
+
+<span class="n">opt</span><span class="o">.</span><span class="n">columnDefs</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;className&quot;</span><span class="p">:</span> <span class="s2">&quot;dt-left&quot;</span><span class="p">,</span> <span class="s2">&quot;targets&quot;</span><span class="p">:</span> <span class="s2">&quot;_all&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="s2">&quot;500px&quot;</span><span class="p">,</span> <span class="s2">&quot;targets&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">if (typeof require !== 'undefined')
+    require.config({
+        paths: {
+            jquery: 'https://code.jquery.com/jquery-3.5.1.min',
+            datatables: 'https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min',
+        }
+    });
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cwd</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;Excel&#39;</span><span class="p">,</span> <span class="s1">&#39;CodeV_optimization_operands.xlsx&#39;</span><span class="p">))</span>
+<span class="n">df_var</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">sheet_name</span> <span class="o">=</span> <span class="s2">&quot;Optical Database Information&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">index_col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">df_var</span> <span class="o">=</span> <span class="n">df_var</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>   <span class="c1"># drop nan values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_var</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table id="693d6b63-ee43-4331-aa42-8ce8d4b74d97" class="display"style="max-width:100%"><thead><th></th><th>Operand Name</th><th>Description</th><th>Returns</th><th>Order</th></thead><tbody><tr><td>Loading... (need <a href=https://mwouts.github.io/itables/troubleshooting.html>help</a>?)</td></tr></tbody></table>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+<style> table td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+} </style>
+<style> table th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+} </style>
+<script type="module">
+    // Define the table data
+    const data = [["Optical Definitions", "EPD|EXD|FNO|NA|NAO [Zn]", "\u2013\u00a0", "Returns pupil definition", 1.0], ["Optical Definitions", "EFX|EFY|FPX|FPY [Si..j] [Wk] [Zn]", "\u2013\u00a0", "Returns effective focal length", 3.0], ["Optical Definitions", "RED [Wk] [Zn]", "\u2013\u00a0", "Returns reduction ratio", 4.0], ["Optical Definitions", "ENP|EXP [Zn] [Fm]", "\u2013\u00a0", "Returns entrance and exit pupil distances", 5.0], ["Optical Definitions", "DIX|DIY [Zn] [Fm]", "\u2013\u00a0", "Returns fractional distortion", 6.0], ["Optical Definitions", "XFO|YFO [Zn] [Fm]", "\u2013\u00a0", "Returns X/Y close skew ray focal shift", 7.0], ["Optical Definitions", "YNI Sk [Zn]", "\u2013\u00a0", "Returns product of paraxial y, ni", 8.0], ["Optical Definitions", "AFN [Si..j] [Zn]", "\u2013\u00a0", "Returns the ANSI f/no of the surface group", 9.0], ["Manufacturing and Packaging", "CT Sk [Zn] [MEC [IDS]]", "\u2013\u00a0", "Returns physical surface-to-surface thickness along the Z-axis (accounts for piston terms on Zernike surfaces and can ignore dummy surfaces via MEC IDS keywords) ", 10.0], ["Manufacturing and Packaging", "ET Sk [Zn] [MEC [IDS] [overage_factor [overage_constant]]]", "\u2013\u00a0", "Returns edge thickness", 11.0], ["Manufacturing and Packaging", "SD Sk [Zn] [MEC [overage_factor [overage_constant]]])", "\u2013\u00a0", "Returns semi-diameter", 12.0], ["Manufacturing and Packaging", "ATC Sk [Zn] [MEC [IDS] [overage_factor [overage_constant]]]", "\u2013\u00a0", "Returns the ratio of center thickness to diameter ", 13.0], ["Manufacturing and Packaging", "ATE Sk [Zn] [MEC [IDS] [overage_factor [overage_constant]]]", "\u2013\u00a0", "Returns the ratio of edge thickness to diameter ", 14.0], ["Manufacturing and Packaging", "IMC [Zn] [MEC [IDS] [overage_factor [overage_constant]]]", "\u2013\u00a0", "Returns image surface clearance (edge or center)", 15.0], ["Manufacturing and Packaging", "IMD [Zn]", "\u2013\u00a0", "Returns image distance plus defocus", 16.0], ["Manufacturing and Packaging", "TT [Zn]", "\u2013\u00a0", "Returns total track - object to image (finite conjugate only)", 17.0], ["Manufacturing and Packaging", "BLO Sk [Zn]", "\u2013\u00a0", "Returns blocking ratio (semi-diameter/radius)", 18.0], ["Manufacturing and Packaging", "OAL [Si..j] [Zn]", "\u2013\u00a0", "Returns overall length from Si to Sj (note that the thickness following Sj is not included)", 19.0], ["Manufacturing and Packaging", "ASC|BSC|CSC|XSC|YSC|ZSC|LSC|MSC|NSC Sk [Zn] Gj", "\u2013\u00a0", "Returns global surface location and orientation from GSC output ", 20.0], ["Manufacturing and Packaging", "SN2 Sk [Zn]", "\u2013\u00a0", "Returns the General Tolerance Sensitivity value (between 0 and 1)", 21.0], ["Manufacturing and Packaging", "SNS Sk [Zn]", "\u2013\u00a0", "Returns sensitivity of tilt/decenter", 22.0], ["Manufacturing and Packaging", "QSG Sk [Zn]", "\u2013\u00a0", "Returns RMS sag departure from the base conic in lens units for Qcon aspheres", 23.0], ["Manufacturing and Packaging", "QSL Sk [Zn]", "\u2013\u00a0", "Returns RMS slope departure from the base conic in waves per aperture radius at the fringe wavelength (FRW) for Qbfs and Q2D aspheres", 24.0], ["Manufacturing and Packaging", "NRF Sk [Zn]", "\u2013\u00a0", "Returns normalization radius, which represents the ratio of the NRADIUS/MAV at that surface", 25.0], ["Paraxial Ray Trace Data", "UMX|UMY [Sk] [Zn] [Wj]", "\u2013\u00a0", "Returns the X/Y-plane paraxial marginal ray exiting slope angle", 26.0], ["Paraxial Ray Trace Data", "HMX|HMY [Sk] [Zn] [Wj]", "\u2013\u00a0", "Returns the X/Y-plane paraxial marginal ray height", 27.0], ["Paraxial Ray Trace Data", "IMX|IMY [Sk] [Zn] [Wj]", "\u2013\u00a0", "Returns the X/Y-plane paraxial marginal ray angle of incidence/refraction/reflection", 28.0], ["Paraxial Ray Trace Data", "UCX|UCY [Sk] [Zn] [Wj]", "\u2013\u00a0", "Returns the X/Y-plane paraxial chief ray exiting slope angle", 29.0], ["Paraxial Ray Trace Data", "HCX|HCY [Sk] [Zn] [Wj]", "\u2013\u00a0", "Returns the X/Y-plane paraxial chief ray height", 30.0], ["Paraxial Ray Trace Data", "ICX|ICY [Sk] [Zn] [Wj]", "\u2013\u00a0", "Returns the X/Y-plane paraxial chief ray angle of incidence/refraction/ reflection", 31.0], ["First- and Third-order Aberrations", "AX [Sk | Si..j] [Zn] [Wj..k]", "\u2013\u00a0", "Returns the primary transverse axial color", 32.0], ["First- and Third-order Aberrations", "LAT [Sk | Si..j] [Zn] [Wj..k]", "\u2013\u00a0", "Returns the primary transverse lateral color", 33.0], ["First- and Third-order Aberrations", "SA [Sk | Si..j] [Zn] [Wj..k]", "\u2013\u00a0", "Returns the third order transverse spherical aberration", 34.0], ["First- and Third-order Aberrations", "TCO [Sk | Si..j] [Zn] [Wj..k]", "\u2013\u00a0", "Returns the third order tangential coma", 35.0], ["First- and Third-order Aberrations", "SAS [Sk | Si..j] [Zn] [Wj..k]", "\u2013\u00a0", "Returns the third order transverse sagittal astigmatism", 36.0], ["First- and Third-order Aberrations", "TAS [Sk | Si..j] [Zn] [Wj..k]", "\u2013\u00a0", "Returns the third order transverse tangential astigmatism", 37.0], ["First- and Third-order Aberrations", "PTB [Sk | Si..j] [Zn] [Wj..k]", "\u2013\u00a0", "Returns third order transverse Petzval blur", 38.0], ["First- and Third-order Aberrations", "DST [Sk | Si..j] [Zn] [Wj..k]", "\u2013\u00a0", "Returns the third order transverse distortion", 39.0], ["First- and Third-order Aberrations", "PTZ Sk|Si..j [Zn] [Wj]", "\u2013\u00a0", "Returns third order Petzval surface curvature ", 40.0], ["Real Ray Trace Data ", "RSI, SIN", "SIN \u2026 single ray trace\nRSI \u2026 relative single ray trace", "Returns single item for designated ray, tracing only when needed; if Rj is omitted, Fm and Wj are ignored and value returned is for last RSI or SIN traced", 41.0], ["Real Ray Trace Data ", "X|Y|Z|L|M|N|AOI|AOR|SRL|SRM|SRN [Sk] [Zn] [Fm] [Wj] [Gj] [Ri]\n(L,M,N, are for ray following the surface)", "x-coordinate\ny-coord.\nZ-coord.\nL M N \u2026 direction cosines\nAOI \u2026 angle of incidence\nSRL, SRM, SRN \u2026 direction cosines of surface normal\n", "Return reay ray trace data", 42.0], ["Real Ray Trace Data ", "OP [Si..j] [Zn] [Fm] [Wj] [Ri] [RFS]", "\u2013\u00a0", "The optional keyword RFS specifies that the optical path length from the object surface to the first surface is measured from a reference sphere centered at the object. This can be useful for systems with long object distances. If RFS is omitted, the optical path length is measured from the object point. RFS is only valid when the first surface number of the specified range is the object surface.", 43.0], ["Real Ray Trace Data ", "OPR [Si..j] [Zn] [Fm] [Wj] [Ri]", "\u2013\u00a0", "Equivalent to the OP database item with the RFS keyword. Can be a user-defined constraint in AUT.", 44.0], ["Real Ray Trace Data ", "OPD [ Zn ] [ Fm ] [ Wj ] [ Ri ]", "\u2013\u00a0", "Returns the optical path difference", 45.0], ["Real Ray Trace Data ", "PRO [Sk] [Zn] [Fm] [Wj] [R0|R1]", "\u2013\u00a0", "Returns:\n-1 = Left-handed polarization\n1 = Right-handed polarization\n0 = Linear polarization", 47.0], ["Real Ray Trace Data ", "SCA", "Lens scaling\n", "Returns last scale factor used\n(Default: 1.0)", 51.0], ["Diffractive Optical Elements", "DEP [Sk] [Zn] [Fm] [Wj] [Ri]", "\u2013\u00a0", "Returns diffraction efficiency parameter. \nSee discussion in Bragg and Scalar \nDiffraction Efficiency Calculations of \nthe CODE\u00a0V Lens System Setup Reference Manual.\nNot available: TNX|TNY|LEN", 52.0], ["Diffractive Optical Elements", "HFR [Sk] [Zn] [Fm] [Wj] [Ri]", "\u2013\u00a0", "Returns total spatial frequency (2 points plus aspheric phase terms)., Not available: TNX|TNY|LEN", 53.0], ["Diffractive Optical Elements", "HFA [Sk] [Zn] [Fm] [Wj] [Ri]", "\u2013\u00a0", "Returns spatial frequency for aspheric phase terms only. Not available: TNX|TNY|LEN", 54.0], ["Diffractive Optical Elements", "BLS", "\u2013\u00a0", "For last single ray, returns surface number at which ray is first blocked by an aperture or obscuration\n<0 = Ray is blocked by obscuration\n>0 = Ray is blocked by aperture\n0 = Ray is not blocked", 55.0], ["Diffractive Optical Elements", "RER", "\u2013\u00a0", "For last single ray, return ray error flag\n0 = Trace successful\n>0 = Value is surface number where failure occurred\n<0 = Ray failed when corresponding chief ray (RSI only) failed to trace through the center of the stop; |RER| is surface number where failure occurred\n<0 = Ray failed when corresponding chief ray (RSI only) failed to trace through the center of the stop; |RER| is surface number where failure occurred", 56.0]];
+
+    if (typeof require === 'undefined') {
+        // TODO: This should become the default (use a simple import)
+        // when the ESM version works independently of whether
+        // require.js is there or not, see
+        // https://datatables.net/forums/discussion/69066/esm-es6-module-support?
+        const {default: $} = await import("https://esm.sh/jquery@3.5.0");
+        const {default: initDataTables} = await import("https://esm.sh/datatables.net@1.11.3?deps=jquery@3.5.0");
+
+        initDataTables();
+
+        // Define the dt_args
+        let dt_args = {"columnDefs": [{"className": "dt-left", "targets": "_all"}, {"width": "500px", "targets": 1}], "lengthMenu": [50, 100, 200, 500]};
+        dt_args["data"] = data;
+
+        // Display the table
+        $(document).ready(function () {
+            $('#693d6b63-ee43-4331-aa42-8ce8d4b74d97').DataTable(dt_args);
+        });
+    } else {
+        require(["jquery", "datatables"], ($, datatables) => {
+                // Define the dt_args
+                let dt_args = {"columnDefs": [{"className": "dt-left", "targets": "_all"}, {"width": "500px", "targets": 1}], "lengthMenu": [50, 100, 200, 500]};
+                dt_args["data"] = data;
+
+                // Display the table
+                $(document).ready(function () {
+                    $('#693d6b63-ee43-4331-aa42-8ce8d4b74d97').DataTable(dt_args);
+                });
+            }
+        )
+    }
+</script>
+</div></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="CodeV_markdown.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Code V</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="CodeV_operands_variables.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Variables</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By J. Herbst<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

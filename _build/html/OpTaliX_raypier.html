@@ -1,0 +1,1276 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpTalix to raypier &#8212; OpticalDesignDocu</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">OpticalDesignDocu</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Optical Design Docu
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  KDP-2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="KDP-2_about.html">
+   1. About KDP-2
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="KDP-2_setup_model.html">
+   2. Setup of Model
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_setup_model_commands.html">
+     2.1. Commands
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_setup_model_example_python.html">
+     2.2. Setup a Cooke triplet with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_spot_diagram_matplotlib.html">
+     2.3. Create spot diagram and plot with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_Gaussian_beam.html">
+     2.4. Gaussian beam raytracing in KDP-2 / Koko
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="KDP-2_markdown.html">
+   3. Operands
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_lens_data_base.html">
+     3.1. Lens database items
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_real_single_ray.html">
+     3.2. Real single ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_special_ray.html">
+     3.3. Special real / paraxial ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_aberrations.html">
+     3.4. Aberrations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_parax_ray.html">
+     3.5. Paraxial ray
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_paraxial_chromatic.html">
+     3.6. Paraxial chromatic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_spd_caf.html">
+     3.7. Spot diagram
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_spectrometer.html">
+     3.8. Spectrometer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_real_ray_composite.html">
+     3.9. Real ray composite
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="KDP-2_operands_Gaussian_beam.html">
+     3.10. Gaussian beams
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  OpTaliX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="OpTaliX_setup_model.html">
+   1. Setup of Model
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_setup_model_example_python.html">
+     1.1. Setup a Cooke triplet with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_plotly_spot_diagram.html">
+     1.2. Interactive Python spot diagrams
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_plotly_transverse_ray_fan.html">
+     1.3. OpTaliX: Transverse ray fan plot with Python (plotly)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_python_interactive_3DLayout.html">
+     1.4. OpTaliX: Interactive 3D layout with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Gaussian_beam_example.html">
+     1.5. Gaussian beam raytracing and propagation in OpTaliX
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_CodeV_RayOptics.html">
+     1.6. OpTaliX to CodeV to RayOptics / Rayopt
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="OpTaliX_markdown.html">
+   2. Operands
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_variables.html">
+     2.1. OpTaliX: Optimization Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_LDI_config.html">
+     2.2. OpTaliX: Lens data item configurations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_LDI_surface.html">
+     2.3. OpTaliX: Lens data items surface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_apertures.html">
+     2.4. OpTaliX: Apertures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Geometric%20Analysis.html">
+     2.5. OpTaliX: Geometric Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_optimization_operands.html">
+     2.6. OpTaliX: Optimization Targets  / Constraints
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_RayData.html">
+     2.7. OpTaliX: Ray data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_paraxial.html">
+     2.8. OpTaliX: Lens data items paraxial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_polarization.html">
+     2.9. OpTaliX: Polarization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Tolerance_sensitivity.html">
+     2.10. OpTaliX: Tolerance and Sensitivity Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Illuminantion_source_data.html">
+     2.11. OpTaliX: Illumination source data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Gaussian_beam.html">
+     2.12. OpTaliX: Gaussian beam
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_fiber_data.html">
+     2.13. OpTaliX: Fiber data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_Diffraction_analysis.html">
+     2.14. OpTaliX: Diffraction analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_arrays.html">
+     2.15. OpTaliX: Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="OpTaliX_miscellaneous.html">
+     2.16. OpTaliX: Miscellaneous
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  OSLO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="OSLO_markdown.html">
+   1. OSLO
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ZEMAX
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZEMAX_markdown.html">
+   1. ZEMAX
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ZEMAX_links.html">
+   2. ZEMAX links
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Code_V
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="CodeV_setup_model.html">
+   1. Setup of Model
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_setup_model_example_python.html">
+     1.1. Setup a Cooke triplet macro with python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_Gaussian_beam_tracing.html">
+     1.2. Gaussian beam tracing in CodeV
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="CodeV_markdown.html">
+   2. Code V
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_operands_optical_database_information.html">
+     2.1. Optical Database Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="CodeV_operands_variables.html">
+     2.2. Variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CodeV_links.html">
+   3. Code V: links
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Synopsys
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Synopsys_markdown.html">
+   1. SYNOPSYS
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Comparison
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Comparison_markdown.html">
+   1. Comparison
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Comparison_opt_sensitivity.html">
+     1.1. Comparison: Optimization for reduced tolerance sensitivity / maximum production yield
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Comparison_Gaussian_beams.html">
+     1.2. Comparison: Gaussian beam propagation features
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Optical Design Practice
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="OpticDesign_markdown.html">
+   1. Optical Design Links
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/OpTaliX_raypier.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FOpTaliX_raypier.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/OpTaliX_raypier.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>OpTalix to raypier</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="optalix-to-raypier">
+<h1>OpTalix to raypier<a class="headerlink" href="#optalix-to-raypier" title="Permalink to this headline">¶</a></h1>
+<p>The OpTaliX file “Mobile_US20070024958A1.otx” is read with python, parsed and converted to a raypier model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Work\OpTaliX\Test\Mobile_US20070024958A1.otx&quot;</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Work\OpTaliX\Test\AFL12-15.otx&quot;</span>
+
+<span class="c1"># opten and read the .otx file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#lines</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import re</span>
+<span class="c1">#p = re.compile(lines[0])</span>
+<span class="c1">#print(p.match(&quot;VERS&quot;))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">to_float</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">listf</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="c1"># function to return values</span>
+    <span class="k">if</span> <span class="n">listf</span> <span class="o">==</span> <span class="p">[]:</span>
+       <span class="n">a</span> <span class="o">=</span> <span class="n">listf</span>
+       <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">to_float</span><span class="p">:</span>
+            <span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="n">f</span><span class="p">:])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="n">f</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="n">a</span>
+
+<span class="k">def</span> <span class="nf">search_string_in_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">string_to_search</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Search for the given string in file and return lines containing that string,</span>
+<span class="sd">    along with line numbers&quot;&quot;&quot;</span>
+    <span class="n">line_number</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">list_of_results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Open the file in read only mode</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">read_obj</span><span class="p">:</span>
+        <span class="c1"># Read all lines in the file one by one</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">read_obj</span><span class="p">:</span>
+            <span class="c1"># For each line, check if line contains the string</span>
+            <span class="n">line_number</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">string_to_search</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+                <span class="c1"># If yes, then add the line number &amp; line as a tuple in the list</span>
+                <span class="n">list_of_results</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">line_number</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()))</span>
+    <span class="c1"># Return list of tuples containing line numbers and lines where string is found</span>
+    <span class="k">return</span> <span class="n">list_of_results</span>
+
+<span class="k">def</span> <span class="nf">search_multiple_strings_in_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">list_of_strings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get line from the file along with line numbers, which contains any string from the list&quot;&quot;&quot;</span>
+    <span class="n">line_number</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">list_of_results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Open the file in read only mode</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">read_obj</span><span class="p">:</span>
+        <span class="c1"># Read all lines in the file one by one</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">read_obj</span><span class="p">:</span>
+            <span class="n">line_number</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="c1"># For each line, check if line contains any string from the list of strings</span>
+            <span class="k">for</span> <span class="n">string_to_search</span> <span class="ow">in</span> <span class="n">list_of_strings</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">string_to_search</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+                    <span class="c1"># If any string is found in line, then append that line along with line number in list</span>
+                    <span class="n">list_of_results</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">string_to_search</span><span class="p">,</span> <span class="n">line_number</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()))</span>
+    <span class="c1"># Return list of tuples containing matched string, line numbers and lines where string is found</span>
+    <span class="k">return</span> <span class="n">list_of_results</span>
+
+<span class="k">def</span> <span class="nf">search_multiple_strings_in_file_mod</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">list_of_strings</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get line from the file along with line numbers, which contains any string from the list&quot;&quot;&quot;</span>
+    <span class="n">line_number</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">list_of_results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Open the file in read only mode</span>
+    <span class="c1">#with open(file_name, &#39;r&#39;) as read_obj:</span>
+    <span class="c1">#    # Read all lines in the file one by one</span>
+    <span class="k">if</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">line_number</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="c1"># For each line, check if line contains any string from the list of strings</span>
+            <span class="k">for</span> <span class="n">string_to_search</span> <span class="ow">in</span> <span class="n">list_of_strings</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">string_to_search</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+                    <span class="c1"># If any string is found in line, then append that line along with line number in list</span>
+                    <span class="n">list_of_results</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">string_to_search</span><span class="p">,</span> <span class="n">line_number</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()))</span>
+    <span class="c1"># Return list of tuples containing matched string, line numbers and lines where string is found</span>
+    <span class="k">return</span> <span class="n">list_of_results</span>
+
+<span class="c1"># search in file</span>
+<span class="n">filen_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">rem_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">fld_L</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">&#39;VERS&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+        <span class="n">vers</span> <span class="o">=</span> <span class="n">line</span>
+    <span class="k">if</span> <span class="s1">&#39;FILE&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+        <span class="n">filen_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;REM&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>                <span class="c1"># comment</span>
+        <span class="n">rem_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;PPOS&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># Plot zoom position&#39;</span>
+        <span class="n">ppos</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;NRD&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>                <span class="c1"># </span>
+        <span class="n">nrd</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;DVOM&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">dvom</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;RAIM&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">raim</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;RAIC&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">raic</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>   
+    <span class="k">if</span> <span class="s1">&#39;PIM&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">pim</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="s1">&#39;TRA&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">tra</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="s1">&#39;POL&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">pol</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="s1">&#39;WRX&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">wrx</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="s1">&#39;WRY&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">wry</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="s1">&#39;ZWX&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">zwx</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="s1">&#39;ZWY&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">zwy</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="s1">&#39;RCX&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">dvom</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="s1">&#39;RCY&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">rcy</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;M2&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">m2</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;TGR&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">tgr</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;MPRS&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">mprs</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">to_float</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;MPRR&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">mprr</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">to_float</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;FSR&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">fsr</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;FSD&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">fsd</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;FRR&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">frr</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;FRD&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">frd</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;FNO&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">fno</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;WL&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">wl</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;WTW&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">wtw</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;REF&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">ref</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;OSPF&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">ospf</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;IFR&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">ifr</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;FTYP&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">ftyp</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;MAXFLD&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">maxfld</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;NFLD&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">nfld</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;FLD&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="c1">#fld = ret_value(line)</span>
+        <span class="n">fld_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="k">if</span> <span class="s1">&#39;MFR&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">mfr</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;MFRF&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">mfrf</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;MTFAVG&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">mtfavg</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;MTFIDEAL&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">mtfideal</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;AFR&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">afr</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;DEF&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">def_</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;KLDR&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">kldr</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;PLSC &#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">plsc</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;PLSC2&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">plsc2</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;DISTREF&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">distref</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="c1">#if &#39;AF&#39; in line:               # </span>
+    <span class="c1">#    af = ret_value(line)</span>
+    <span class="k">if</span> <span class="s1">&#39;TRXLAM &#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">trxlam</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;TRXLAM2&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">trxlam2</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;TRPLANE&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>               <span class="c1"># </span>
+        <span class="n">trplane</span> <span class="o">=</span> <span class="n">ret_value</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+        
+<span class="n">list_data</span> <span class="o">=</span> <span class="n">search_multiple_strings_in_file_mod</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">list_of_strings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SUR&quot;</span><span class="p">,</span> <span class="s2">&quot;! &quot;</span><span class="p">])</span>
+<span class="n">list_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">list_data</span><span class="p">)</span>
+<span class="n">list_data_s</span> <span class="o">=</span> <span class="n">search_multiple_strings_in_file_mod</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">list_of_strings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SUR&quot;</span><span class="p">])</span>
+<span class="n">list_data_s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">list_data_s</span><span class="p">)</span>
+<span class="c1">#print(list_data)</span>
+<span class="n">surend</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">list_data</span><span class="p">[</span><span class="n">list_data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;! &#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="c1">#print(&quot;surend = &quot;, surend)</span>
+
+<span class="n">list_data_s</span> <span class="o">=</span> <span class="n">list_data_s</span><span class="p">[</span><span class="n">list_data_s</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">&lt;</span><span class="n">surend</span><span class="p">]</span>
+
+<span class="c1"># get information for every surface</span>
+<span class="n">list_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">list_data_sur_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">list_data_s</span> <span class="p">)):</span>
+    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">list_data_s</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">lineindex</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">list_data_s</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">lineindex2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">list_data_s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">lineindex</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">list_data_s</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">lineindex2</span> <span class="o">=</span> <span class="n">surend</span>
+    <span class="n">list_L</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">lineindex</span><span class="p">,</span> <span class="n">lineindex2</span><span class="p">))</span>
+    
+    <span class="n">list_data_sur</span> <span class="o">=</span> <span class="n">search_multiple_strings_in_file_mod</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)[</span><span class="n">lineindex</span><span class="p">:</span> <span class="n">lineindex2</span><span class="p">],</span> <span class="n">list_of_strings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SUT&quot;</span><span class="p">,</span> <span class="s2">&quot;CUY&quot;</span><span class="p">,</span> <span class="s2">&quot;THI&quot;</span><span class="p">,</span> <span class="s2">&quot;APE&quot;</span><span class="p">,</span> 
+                                                                                 <span class="s2">&quot;STO&quot;</span><span class="p">,</span> <span class="s2">&quot;GLA&quot;</span><span class="p">,</span> <span class="s2">&quot;ASP&quot;</span><span class="p">,</span> <span class="s2">&quot;VAR&quot;</span><span class="p">])</span>
+    <span class="n">list_data_sur_L</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">list_data_s</span> <span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">list_data_sur</span><span class="p">)))</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#print(list_data_s)</span>
+<span class="c1">#print(list_data_sur)</span>
+<span class="c1">#print(list_L)</span>
+<span class="c1">#print(surend)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#print(len(list_data_sur_L))</span>
+<span class="c1">#print(list_data_sur_L[2][0])</span>
+<span class="c1">#print(list_data_sur_L[8][1])</span>
+<span class="c1">#print((list_data_sur_L[8][1][list_data_sur_L[8][1][:,0] == &quot;GLA&quot;])[:,2])</span>
+<span class="c1">#print(list_data_sur_L[0][1][list_data_sur_L[0][1][:,0] == &quot;CUY&quot;][:,2][0])</span>
+<span class="c1">#print(list_data_sur_L[2][1].shape)</span>
+<span class="c1">#print(list_data_sur_L[i][1][list_data_sur_L[i][1][:,0] == &quot;SUT&quot;])</span>
+<span class="n">sut_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">cuy_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">thi_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">sto_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">var_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">gla_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ape_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">asp_L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">list_data_sur_L</span><span class="p">)):</span>
+    <span class="c1">#print(&quot;i = &quot;, i)</span>
+    <span class="n">sut</span> <span class="o">=</span> <span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;SUT&quot;</span><span class="p">][:,</span><span class="mi">2</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">cuy</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;CUY&quot;</span><span class="p">][:,</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">6</span><span class="p">:])</span>
+    <span class="n">thi</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;THI&quot;</span><span class="p">][:,</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">6</span><span class="p">:])</span>
+
+    <span class="n">sto</span> <span class="o">=</span> <span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;STO&quot;</span><span class="p">][:,</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">gla</span> <span class="o">=</span> <span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;GLA&quot;</span><span class="p">][:,</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">ape</span> <span class="o">=</span> <span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;APE&quot;</span><span class="p">][:,</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">6</span><span class="p">:]</span>
+    <span class="n">asp</span> <span class="o">=</span> <span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;ASP&quot;</span><span class="p">][:,</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">list_data_sur_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;VAR&quot;</span><span class="p">][:,</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">sut_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sut</span><span class="p">)</span>
+    <span class="n">cuy_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cuy</span><span class="p">)</span>
+    <span class="n">thi_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thi</span><span class="p">)</span>
+    <span class="n">sto_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sto</span><span class="p">)</span>
+    <span class="n">gla_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gla</span><span class="p">)</span>
+    <span class="n">ape_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ape</span><span class="p">)</span>
+    <span class="n">asp_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asp</span><span class="p">)</span>
+    <span class="n">var_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sut_L</span><span class="p">)</span>
+<span class="c1">#print(cuy_L)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">thi_L</span><span class="p">)</span>
+<span class="c1">#print(sto_L)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gla_L</span><span class="p">)</span>
+<span class="c1">#print(ape_L[-1][5:5+10])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">asp_L</span><span class="p">)</span>
+<span class="c1">#print(asp_L[2][0].split()[1])</span>
+<span class="c1">#print(var_L)</span>
+<span class="c1">#result = [i for i in (list_data_sur_L[2][1]) if i.startswith(&#39;SUT&#39;)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;S&#39;, &#39;A&#39;, &#39;S&#39;, &#39;S&#39;]
+[1e+20, 4.0, 12.32032337, 0.0]
+[array([], dtype=&#39;&lt;U118&#39;), array([&#39;  GLA HPFS7980&#39;], dtype=&#39;&lt;U181&#39;), array([], dtype=&#39;&lt;U118&#39;), array([], dtype=&#39;&lt;U118&#39;)]
+[array([], dtype=&#39;&lt;U118&#39;), array([&#39;  ASP -0.6700000000      0.3440000000E-04  0.1430000000E-06   0.000000000       0.000000000       0.000000000       0.000000000       0.000000000       0.000000000       0.000000000&#39;],
+      dtype=&#39;&lt;U181&#39;), array([], dtype=&#39;&lt;U118&#39;), array([], dtype=&#39;&lt;U118&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">raypier.api</span> <span class="kn">import</span> <span class="n">RayTraceModel</span><span class="p">,</span> <span class="n">GeneralLens</span><span class="p">,</span> <span class="n">ParallelRaySource</span><span class="p">,</span> <span class="n">SphericalFace</span><span class="p">,</span> <span class="n">CircleShape</span><span class="p">,</span> <span class="n">OpticalMaterial</span><span class="p">,</span> <span class="n">AsphericFace</span>
+
+
+<span class="c1"># check</span>
+<span class="kn">from</span> <span class="nn">raypier</span> <span class="kn">import</span> <span class="n">tracer</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tracer</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="c1">### Build a couple of lenses ###</span>
+    <span class="n">shape_L</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">f_L</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">list_data_sur_L</span><span class="p">)):</span>
+        
+        <span class="n">shape_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">CircleShape</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">ape_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">:</span><span class="mi">5</span><span class="o">+</span><span class="mi">10</span><span class="p">])))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dia: &quot;</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">ape_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">5</span><span class="p">:</span><span class="mi">5</span><span class="o">+</span><span class="mi">10</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="n">sut_L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;S&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i: &quot;</span><span class="p">,</span><span class="n">i</span> <span class="p">,</span> <span class="s2">&quot; sphere&quot;</span><span class="p">)</span>
+            
+            <span class="n">f_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">SphericalFace</span><span class="p">(</span><span class="n">curvature</span><span class="o">=</span><span class="n">cuy_L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">z_height</span><span class="o">=</span><span class="n">thi_L</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="n">sut_L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i: &quot;</span><span class="p">,</span><span class="n">i</span> <span class="p">,</span> <span class="s2">&quot; asphere&quot;</span><span class="p">)</span>
+            <span class="n">asp_coeffs</span> <span class="o">=</span> <span class="n">asp_L</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">asphere</span> <span class="o">=</span> <span class="n">AsphericFace</span><span class="p">(</span><span class="n">z_height</span><span class="o">=</span><span class="n">thi_L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                                  <span class="n">curvature</span><span class="o">=</span><span class="n">cuy_L</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>            
+                                  <span class="n">conic_const</span><span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">asp_coeffs</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+                                  <span class="n">A4</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">asp_coeffs</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span>  <span class="c1"># A</span>
+                                  <span class="n">A6</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">asp_coeffs</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="c1">#I&#39;m not 100% sure if the signs of the polynomial terms are right.</span>
+                                  <span class="n">A8</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">asp_coeffs</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span> <span class="c1"># C</span>
+                                  <span class="n">A10</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">asp_coeffs</span><span class="p">[</span><span class="mi">5</span><span class="p">]),</span> <span class="c1"># D</span>
+                                  <span class="n">A12</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">asp_coeffs</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span> <span class="c1"># E</span>
+                                  <span class="n">A14</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">asp_coeffs</span><span class="p">[</span><span class="mi">7</span><span class="p">]),</span> <span class="c1"># F</span>
+                                  <span class="n">A16</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">asp_coeffs</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span><span class="c1">#, # G</span>
+                                  <span class="c1">#A18 = asp_coeffs[9]  # H</span>
+                                  <span class="p">)</span>
+            <span class="n">f_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asphere</span><span class="p">)</span>
+            
+    <span class="nb">print</span><span class="p">(</span><span class="n">shape_L</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f_L</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">thi_L</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="c1">#print(asphere)</span>
+            
+    <span class="c1">#f1 = SphericalFace(curvature=-50.0, z_height=0.0)</span>
+    <span class="c1">#f2 = SphericalFace(curvature=50.0, z_height=5.0)</span>
+
+    <span class="c1">#lens2 = GeneralLens(centre=(0,0,100.0),</span>
+    <span class="c1">#                    direction=(0,0,1),</span>
+    <span class="c1">#                    shape=shape,</span>
+    <span class="c1">#                    surfaces=[f1,f2],</span>
+    <span class="c1">#                    materials=[m])</span>
+
+    <span class="c1">### Add a source ###</span>
+   <span class="c1"># src = ParallelRaySource(origin=(0,0,-50.0),</span>
+   <span class="c1">#                         direction=(0,0,1),</span>
+   <span class="c1">#                         rings=5,</span>
+   <span class="c1">#                         show_normals=False,</span>
+   <span class="c1">#                         display=&quot;wires&quot;,</span>
+   <span class="c1">#                         opacity=0.1)</span>
+<span class="c1">#</span>
+  <span class="c1">#  model = RayTraceModel(optics=[lens1,lens2],</span>
+     <span class="c1">#                       sources=[src])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span>\<span class="n">ipykernel_4244</span>\<span class="mf">2402770825.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">raypier.api</span> <span class="kn">import</span> <span class="n">RayTraceModel</span><span class="p">,</span> <span class="n">GeneralLens</span><span class="p">,</span> <span class="n">ParallelRaySource</span><span class="p">,</span> <span class="n">SphericalFace</span><span class="p">,</span> <span class="n">CircleShape</span><span class="p">,</span> <span class="n">OpticalMaterial</span><span class="p">,</span> <span class="n">AsphericFace</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># check</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">raypier</span> <span class="kn">import</span> <span class="n">tracer</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;raypier&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shape_L</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;raypier.shapes.CircleShape at 0x23cec7c79a0&gt;,
+ &lt;raypier.shapes.CircleShape at 0x23d3438b6d0&gt;,
+ &lt;raypier.shapes.CircleShape at 0x23d34d3bd60&gt;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">raypier.api</span> <span class="kn">import</span> <span class="n">GeneralLens</span><span class="p">,</span> <span class="n">AxiconFace</span><span class="p">,</span> <span class="n">PlanarFace</span><span class="p">,</span> <span class="n">OpticalMaterial</span><span class="p">,</span> <span class="n">CircleShape</span><span class="p">,</span>\
+            <span class="n">RayTraceModel</span><span class="p">,</span> <span class="n">CollimatedGaussletSource</span><span class="p">,</span> <span class="n">EFieldPlane</span><span class="p">,</span> <span class="n">GaussletCapturePlane</span><span class="p">,</span> <span class="n">IntensitySurface</span>
+            
+
+
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">OpticalMaterial</span><span class="p">(</span><span class="n">glass_name</span><span class="o">=</span><span class="s2">&quot;N-BK7&quot;</span><span class="p">)</span>
+<span class="n">lens</span>  <span class="o">=</span> <span class="n">GeneralLens</span><span class="p">(</span><span class="n">centre</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+                    <span class="n">direction</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+                    <span class="n">shape</span><span class="o">=</span><span class="n">shape_L</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                    <span class="n">surfaces</span><span class="o">=</span><span class="p">[</span><span class="n">f_L</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">f_L</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span>
+                    <span class="n">materials</span><span class="o">=</span><span class="p">[</span><span class="n">m</span><span class="p">])</span>
+
+<span class="c1">### Add a source ###</span>
+<span class="n">src</span> <span class="o">=</span> <span class="n">ParallelRaySource</span><span class="p">(</span><span class="n">origin</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">5.0</span><span class="p">),</span>
+                        <span class="n">direction</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+                        <span class="n">rings</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                        <span class="n">show_normals</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">display</span><span class="o">=</span><span class="s2">&quot;wires&quot;</span><span class="p">,</span>
+                        <span class="n">opacity</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="c1">#src = CollimatedGaussletSource(origin=(0.001,0,-10.0),</span>
+<span class="c1">#                               direction=(0,0,1),</span>
+<span class="c1">#                               wavelength=0.5,</span>
+<span class="c1">#                               radius=1.0,</span>
+<span class="c1">#                               beam_waist=10.0,</span>
+<span class="c1">#                               resolution=10,</span>
+<span class="c1">#                               max_ray_len=50.0,</span>
+<span class="c1">#                               display=&#39;wires&#39;,</span>
+<span class="c1">#                               opacity=0.2</span>
+<span class="c1">#                               )</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">RayTraceModel</span><span class="p">(</span><span class="n">optics</span><span class="o">=</span><span class="p">[</span><span class="n">lens</span><span class="p">],</span>
+                      <span class="n">sources</span><span class="o">=</span><span class="p">[</span><span class="n">src</span><span class="p">])</span>
+<span class="n">model</span><span class="o">.</span><span class="n">ipython_view</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/OpTaliX_raypier_10_0.png" src="_images/OpTaliX_raypier_10_0.png" />
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "0c41f23b3cc74e68afc758b3cb0e0325", "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mf">0.13537295248409</span><span class="p">)</span>
+
+<span class="n">glass</span> <span class="o">=</span> <span class="s1">&#39;HPFS7980&#39;</span>
+<span class="n">dir_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Program Files\OpTaliX-PRO\glasses&#39;</span>
+
+<span class="c1"># find glass in OpTaliX glass catalogues</span>
+<span class="c1"># C:\Program Files\OpTaliX-PRO\glasses</span>
+<span class="k">def</span> <span class="nf">search_glass</span><span class="p">(</span><span class="n">dir_path</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">os</span>
+
+    <span class="c1"># iterate each file in a directory</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dir_path</span><span class="p">):</span>
+        <span class="n">cur_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+        <span class="c1"># check if it is a file</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">cur_path</span><span class="p">):</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cur_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+                <span class="c1"># read all content of a file and search string</span>
+                <span class="k">if</span> <span class="n">glass</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">():</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;string found in file: &#39;</span><span class="p">,</span> <span class="n">cur_path</span><span class="p">)</span>
+                    <span class="k">break</span>
+    <span class="k">return</span> <span class="n">cur_path</span>
+
+<span class="n">cur_path</span> <span class="o">=</span>  <span class="n">search_glass</span><span class="p">(</span><span class="n">dir_path</span><span class="p">)</span>  
+
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cur_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data_glass</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+<span class="n">Legend</span> <span class="o">=</span> <span class="n">search_multiple_strings_in_file_mod</span><span class="p">(</span><span class="n">data_glass</span><span class="p">,</span> <span class="n">list_of_strings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;!Manufact&quot;</span><span class="p">])</span>
+<span class="n">Legend</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Legend</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">list_data_glass</span> <span class="o">=</span> <span class="n">search_multiple_strings_in_file_mod</span><span class="p">(</span><span class="n">data_glass</span><span class="p">,</span> <span class="n">list_of_strings</span> <span class="o">=</span> <span class="p">[</span><span class="n">glass</span><span class="p">])</span>
+<span class="n">list_data_glass</span> <span class="o">=</span> <span class="n">list_data_glass</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+
+
+<span class="k">def</span> <span class="nf">filter_info</span><span class="p">(</span><span class="n">list_data_glass</span><span class="p">):</span>
+    <span class="n">list_data_glass</span> <span class="o">=</span> <span class="n">list_data_glass</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    
+    <span class="n">listr_L</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">listr</span> <span class="ow">in</span> <span class="n">list_data_glass</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">listr</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">element</span> <span class="o">=</span> <span class="n">listr</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">element</span> <span class="o">=</span> <span class="n">listr</span>
+        <span class="n">listr_L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span> <span class="p">)</span>
+    
+
+    <span class="n">listr_L</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">listr_L</span><span class="p">))</span>
+    <span class="n">listr_L</span> <span class="o">=</span> <span class="n">listr_L</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">listr_L</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+    <span class="n">listr_L</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">listr_L</span><span class="p">))</span>
+    <span class="n">listr_L2</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">listr</span> <span class="ow">in</span> <span class="n">listr_L</span><span class="p">:</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="n">listr</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">listr_L2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="n">listr_L2</span>
+
+<span class="c1">#list_data_glass = filter_info(list_data_glass)</span>
+
+<span class="c1">#model.ipython_view(400,300)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.3870000000002
+string found in file:  C:\Program Files\OpTaliX-PRO\glasses\special.csv
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">list_data_glass</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Legend</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_data_glass</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Legend</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)))</span>
+
+<span class="n">Leg</span> <span class="o">=</span> <span class="n">Legend</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Leg = &quot;</span><span class="p">,</span> <span class="n">Leg</span><span class="p">[</span><span class="mi">14</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;SPECIAL   &#39;, &#39;HPFS7980  &#39;, &#39;SILICA    &#39;, &#39;       &#39;, &#39;0.683740494   &#39;, &#39; 0.420323613  &#39;, &#39; 0.585027480  &#39;, &#39; 0.00460352869&#39;, &#39; 0.01339688560&#39;, &#39; 64.4932732   &#39;, &#39;            &#39;, &#39;            &#39;, &#39;            &#39;, &#39; 1 &#39;, &#39;    0.18 &#39;, &#39;    2.30 &#39;, &#39;   &#39;, &#39; 2.40E-5 &#39;, &#39; 0.0     &#39;, &#39; 0.0     &#39;, &#39; 5.5E-7  &#39;, &#39; 0.0     &#39;, &#39;0.10     &#39;, &#39;      &#39;, &#39;      &#39;, &#39;      &#39;, &#39;      &#39;, &#39;      &#39;, &#39;      &#39;, &#39;10.0&#39;, &#39;0.9897&#39;, &#39;0.9964&#39;, &#39;0.9997&#39;, &#39;0.9998&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9998&#39;, &#39;0.9998&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9999&#39;, &#39;0.9997&#39;, &#39;0.9996&#39;, &#39;0.9992&#39;, &#39;0.9962&#39;, &#39;0.9846&#39;, &#39;0.9747&#39;, &#39;0.9831&#39;, &#39;     &#39;, &#39; 0.52&#39;, &#39;     &#39;, &#39; 2.20&#39;, &#39;&#39;]
+[&#39;!Manufact &#39;, &#39;Name      &#39;, &#39;EqName    &#39;, &#39;Code   &#39;, &#39;B1            &#39;, &#39;B2            &#39;, &#39;B3            &#39;, &#39;C1            &#39;, &#39;C2            &#39;, &#39;C3            &#39;, &#39;  A7        &#39;, &#39; A8         &#39;, &#39; A9         &#39;, &#39;EQ &#39;, &#39;     Lmin&#39;, &#39;    Lmax &#39;, &#39;Lv &#39;, &#39;D0       &#39;, &#39;D1       &#39;, &#39;D2       &#39;, &#39;E0       &#39;, &#39;E1       &#39;, &#39;LTK      &#39;, &#39;DNDT7 &#39;, &#39;DNDT8 &#39;, &#39;DNDT9 &#39;, &#39;DNDT10&#39;, &#39;DNDT11&#39;, &#39;DNDT12&#39;, &#39;DRT &#39;, &#39;  2500&#39;, &#39;  2325&#39;, &#39;  1970&#39;, &#39;  1530&#39;, &#39;  1060&#39;, &#39;   700&#39;, &#39;   660&#39;, &#39;   620&#39;, &#39;   580&#39;, &#39;   546&#39;, &#39;   500&#39;, &#39;   460&#39;, &#39;   436&#39;, &#39;   420&#39;, &#39;   404&#39;, &#39;   400&#39;, &#39;   390&#39;, &#39;   380&#39;, &#39;   370&#39;, &#39;   365&#39;, &#39;   350&#39;, &#39;   334&#39;, &#39;   320&#39;, &#39;   310&#39;, &#39;   300&#39;, &#39;   290&#39;, &#39;   280&#39;, &#39;   270&#39;, &#39;   260&#39;, &#39;   250&#39;, &#39;   240&#39;, &#39;   230&#39;, &#39;   CC&#39;, &#39; al1 &#39;, &#39; al2 &#39;, &#39; rho &#39;, &#39;price&#39;]
+67
+67
+Leg =       Lmin
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">raypier.api</span> <span class="kn">import</span> <span class="n">OpticalMaterialFromFormula</span>
+<span class="c1">#m1 = OpticalMaterial(from_database=False, refractive_index=1.5)</span>
+
+<span class="n">coeffs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">list_data_glass</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">coeffs</span><span class="p">)</span>
+<span class="n">Lmin</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="n">list_data_glass</span><span class="p">[</span><span class="mi">14</span><span class="p">])</span>
+<span class="n">Lmax</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="n">list_data_glass</span><span class="p">[</span><span class="mi">15</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Lmin</span><span class="p">)</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">OpticalMaterialFromFormula</span><span class="p">(</span><span class="n">formula_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">coefs</span> <span class="o">=</span> <span class="n">coeffs</span><span class="p">,</span> <span class="n">wavelen_min</span> <span class="o">=</span> <span class="n">Lmin</span><span class="p">,</span> <span class="n">wavelen_max</span> <span class="o">=</span> <span class="n">Lmax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.683740494, 0.420323613, 0.58502748, 0.00460352869, 0.0133968856, 64.4932732]
+0.18
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">vers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">filen_L</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ppos</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nrd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dvom</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pol</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wl</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fld_L</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mfr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mfrf</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">surend</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lineindex</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lineindex2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_L</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">list_L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)[</span><span class="n">list_L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span><span class="n">list_L</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>VERS 11.45 BETA      
+
+[&#39;FILE C:\\Work\\OpTaliX\\Test\\AFL12-15.otx\n&#39;, &quot;GHO RGBFILE &#39;c:\\temp\\testghost2.txt&#39;\n&quot;, &#39;BPMFILE &quot;&quot;\n&#39;]
+[0. 1.]
+[32. 32.]
+[1.]
+[-1. -1.]
+[0.285]
+[[&#39;MAXFLD&#39;, &#39;33&#39;], [&#39;NFLD&#39;, &#39;1&#39;], [&#39;FLD&#39;, &#39;1&#39;, &#39;0.000000000&#39;, &#39;0.000000000&#39;, &#39;100&#39;, &#39;1&#39;, &#39;254&#39;], [&#39;EIMD&#39;, &#39;FLD&#39;, &#39;0&#39;]]
+[40.]
+[40.]
+[[&#39;! &#39; &#39;38&#39; &#39;! Surface data :&#39;]
+ [&#39;SUR&#39; &#39;39&#39; &#39;SUR   0&#39;]
+ [&#39;SUR&#39; &#39;44&#39; &#39;SUR   1&#39;]
+ [&#39;SUR&#39; &#39;53&#39; &#39;SUR   2&#39;]
+ [&#39;SUR&#39; &#39;59&#39; &#39;SUR   3&#39;]
+ [&#39;! &#39; &#39;64&#39; &#39;! Tolerance Statistics :&#39;]
+ [&#39;! &#39; &#39;99&#39; &#39;! Ghost parameters :&#39;]
+ [&#39;SUR&#39; &#39;100&#39; &#39;GHO SUR    2   11&#39;]
+ [&#39;! &#39; &#39;110&#39; &#39;! Beam propagation data :&#39;]
+ [&#39;! &#39; &#39;117&#39; &#39;! Extended image (diffraction) data :&#39;]]
+64
+59
+64
+[(39, 44), (44, 53), (53, 59), (59, 64)]
+44
+  SUT S
+
+[&#39;  SUT S\n&#39; &#39;  CUY 0.000000000000000\n&#39; &#39;  THI 0.1000000000000000E+21\n&#39;
+ &quot;  APE  1   0.000000000       0.000000000       0.000000000       0.000000000       0.000000000        1   0   0   1 &#39;&#39;\n&quot;
+ &#39;SUR   1\n&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">list_data</span><span class="p">)</span>
+<span class="c1">#np.array(list_data[:])[:,0]</span>
+<span class="nb">int</span><span class="p">(</span><span class="n">list_data</span><span class="p">[</span><span class="n">list_data</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;! Optimization constraints :&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By J. Herbst<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

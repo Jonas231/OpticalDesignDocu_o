@@ -453,7 +453,7 @@ if create_gif:
 print("Elapsed time: ", np.round(time.perf_counter()-t0, decimals = 4), " s")
 
 There are different ways to generate a plot. Either from a .py script where you can use pyvista's pv.Plotter or BackgroundPlotter to obtain an interactive plot within an extra window. These plots are not interactive within this jupyter notebook environement, however. The plots are inserted as here as simple images instead (first with rect. edge):
-# In[80]:
+# In[3]:
 
 
 PATH = r'C:\Users\herbst\OpticalDesignDocu'
@@ -463,7 +463,7 @@ Image(filename = PATH + "\OpTaliX\OpTaliX_3D_rect.png", width=1000, height=800)
 
 # And with lin. edge:
 
-# In[81]:
+# In[4]:
 
 
 PATH = r'C:\Users\herbst\OpticalDesignDocu'
@@ -473,7 +473,7 @@ Image(filename = PATH + "\OpTaliX\OpTaliX_3D_lint.png", width=1000, height=800)
 
 # Within jupyter the backend "pythreejs" can be used (here also a sagittal ray fan is plotted):
 
-# In[82]:
+# In[5]:
 
 
 if use_pythreejs:
@@ -484,7 +484,7 @@ else:
 
 # A gif can be generated as well and is inserted below:
 
-# In[83]:
+# In[6]:
 
 
 gif_path = r'C:\Users\herbst\.spyder-py3\Python Scripts\Optalix\rotate3D.gif'

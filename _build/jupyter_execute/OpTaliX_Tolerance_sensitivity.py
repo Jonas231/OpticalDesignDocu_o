@@ -38,7 +38,7 @@ df_var = df_var.dropna()   # drop nan values
 df_var
 
 
-# Using Tolerance Sensitivity Items in Optimization
+# "Using Tolerance Sensitivity Items in Optimization
 # If optimizing (minimizing) for tolerance sensitivity, the various tolerance sensitivity items described in the previous section should be understood as aberrations added to the targets/constraints (merit function) list.
 # 
 # See also the syntax for defining tolerance sensitivity. Here is a typical example in the optimization targets/constraints list:
@@ -51,7 +51,7 @@ df_var
 # 
 # 
 # 
-# Note: Do not attempt to request a tolerance sensitivity item to become exactly zero, e.g. 'TSA = 0' as this is impossible on optical elements/surfaces that have optical effect. Instead minimize it by omitting the equal '=' sign in the constraints definition, e.g. 'TSA 0'. 
+# Note: Do not attempt to request a tolerance sensitivity item to become exactly zero, e.g. 'TSA = 0' as this is impossible on optical elements/surfaces that have optical effect. Instead minimize it by omitting the equal '=' sign in the constraints definition, e.g. 'TSA 0'." 
 
 # In[ ]:
 

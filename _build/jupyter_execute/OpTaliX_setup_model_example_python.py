@@ -3,7 +3,7 @@
 
 # # Setup a Cooke triplet with python
 # 
-# The following python code creates a .mac file which is a macro that can be executed within the OpTaliX cli with the command "run Cooke_triplet.mac". This procedure is used for convenience in order to have a list of OpTaliX commands afterwards and to clearly separate between command syntax and text in this notebook. Once you have executed this notebook the file "Cooke_triplet.mac" will be located in the path "filename" (see below).
+# The following python code creates a .mac file which is a macro that can be executed within the OpTaliX cli with the command "run Cooke_triplet.mac". This procedure is used for convenience in order to have a list of OpTaliX commands afterwards and to clearly separate between command syntax and text in this notebook. Once you have executed this notebook the file "Cooke_triplet.mac" will be located in the path "filename" (see below). Of course the system can also be built up using the gui.
 # 
 # At first a function is defined to write a string line into a file.
 
@@ -170,123 +170,104 @@ Image(filename = PATH + "\OpTaliX_Cooke_triplet_ortho.png", width=1000, height=8
 Image(filename = PATH + "\OpTaliX_Cooke_triplet_povray.png", width=600, height=600)
 
 
+# A fully interactive 3D rendered plot can be generated with python, i.e. pyvista (see: [OpTaliX: Interactive 3D layout with Python](./OpTaliX_interactive_3DLayout.ipynb)).
+
 # The lens can be updated and its specifications can be changed:
 
-# In[6]:
+# In[ ]:
 
 
-wl(f, ['u l'])             # update lens
-wl(f, ['chg 2'])           # change surface 2
-wl(f, ['rd 40.94'])        # radius to value
-wl(f, ['chg 3'])           # change surface 3
-wl(f, ['th 11.05']) 
-wl(f, ['ins 1'])           # insert surface at 1
-wl(f, ['del 1'])           # delete surface at 1
-wl(f, ['eos'])             # exit update lens
+
 
 
 # ## Analysis
 # The aberrations of this Cooke triplet can be analyzed with the following commands:
 
-# In[ ]:
+# In[6]:
 
 
-wl(f, ['PXTY ALL'])    # display YZ-plane paraxial ray data
+# display YZ-plane paraxial ray data
 
 
-# The 3rd, 5th and 7th order aberration values calculated are based on the work of Buchdahl. To calculate and display the 3rd, 5th and 7th order spherical aberrations, issue the command:
+# The 3rd order aberration values calculated. To calculate and display the 3rd spherical aberrations, issue the command:
 
-# In[ ]:
-
-
-wl(f, ['SA357 ALL'])   # the 3rd, 5th and 7th order spherical aberrations
+# In[7]:
 
 
-# In[ ]:
+# the 3rd, 5th and 7th order spherical aberrations
 
 
-Image(filename = PATH + "\KDP-2_Cooke_triplet_SA.png", width=300, height=300)
+# In[8]:
+
+
+#Image(filename = PATH + "\KDP-2_Cooke_triplet_SA.png", width=300, height=300)
 
 
 # Chromatic differences:
 
-# In[ ]:
+# In[9]:
 
 
-wl(f, ['PCW?'])        # query primary and secondary wavelength pairs
-wl(f, ['SCW?'])
-wl(f, ['PCDSA ALL'])   # calculate the primary chromatic differences for 3rd, 5th and 7th order spherical aberrations
+#wl(f, ['PCW?'])        # query primary and secondary wavelength pairs
+#wl(f, ['SCW?'])
+#wl(f, ['PCDSA ALL'])   # calculate the primary chromatic differences for 3rd, 5th and 7th order spherical aberrations
 
 
 # ABERRATION FANS AND THEIR PLOTS - To generate transverse fan data at a specific point in the field of view, issue an "FOB" command which specifies that fractional field of view location. In our example lens, the SCY FANG value was 20.81 degrees. To use "FOB" to specify that analysis is to be performed at a Y-object angle of 2.5 degrees and an X-object angle of 1.25 degrees, issue:
 #     
 
-# In[ ]:
+# In[10]:
 
 
-wl(f, ['FOB 0.1201 0.060067'])
-wl(f, ['YFAN, -1, 1, 1, 11'])
-wl(f, ['DRAWFAN'])
+#wl(f, ['FOB 0.1201 0.060067'])
+#wl(f, ['YFAN, -1, 1, 1, 11'])
+#wl(f, ['FAN'])
 
 
 # One obtains this table of values which can also be written to a text file (and plotted with matplotlib, e.g.) or it can be directly plotted with KDP-2 (see below).
-REL AP HT          DX                  DY
- -1.000000 RAY FAILURE CODE =  6 AT SURFACE =   2
- -0.800000   -0.2243904635E-02   -0.2216430059E-01
- -0.600000   -0.1358442951E-02   -0.2460726555E-01
- -0.400000   -0.7936962315E-03   -0.3713971869E-01
- -0.200000   -0.3898744276E-03   -0.2743901890E-01
-  0.000000     0.000000000         0.000000000
-  0.200000    0.4757757406E-03    0.2782398943E-01
-  0.400000    0.1085875231E-02    0.3822439925E-01
-  0.600000    0.1842209584E-02    0.2572073432E-01
-  0.800000    0.2778263372E-02    0.2333944873E-01
-  1.000000 RAY FAILURE CODE =  6 AT SURFACE =   8
-# In[ ]:
+
+# In[11]:
 
 
-Image(filename = PATH + "\KDP-2_Cooke_triplet_yfan_preopt.png", width=900, height=800)
+#Image(filename = PATH + "\KDP-2_Cooke_triplet_yfan_preopt.png", width=900, height=800)
 
 
-# The "FANS" command can be used to generate more complex ray fan aberration graphics. The next two commands generate YZ and XZ-plane, transverse ray aberration plots at three pre-selected field of view positions.
+# The "FAN" command can be used to generate more complex ray fan aberration graphics. The next two commands generate YZ and XZ-plane, transverse ray aberration plots for all five defined fields.
 
-# In[ ]:
-
-
-Image(filename = PATH + "\KDP-2_Cooke_triplet_fans_preopt.png", width=900, height=800)
+# In[12]:
 
 
-# Plotting of spot diagrams in KDP-2 and with python (see: [Create spot diagram and plot with python](./KDP-2_spot_diagram_matplotlib.ipynb)), using:
-
-# In[ ]:
+Image(filename = PATH + "\OpTaliX\OpTaliX_fan.png", width=900, height=800)
 
 
-wl(f, ['FOB .1 .1'])
-wl(f, ['SPD'])         # create spot diagram data
-wl(f, ['PLTSPD'])      # plot spot diagram in KDP-2
+# Plotting of spot diagrams in OpTaliX and with python (see: [Create spot diagram and plot with python](./OpTaliX_plotly_spot_diagram.ipynb)), using:
+
+# In[13]:
 
 
-# In[ ]:
+
+#wl(f, ['SPO'])         # create spot diagram data
 
 
-Image(filename = PATH + "\KDP-2_Cooke_triplet_spot_dia_preopt.png", width=900, height=800)
+# In[14]:
 
 
-# DIFFRACTION MTF - Diffraction MTF generation and plotting is almost as easy. Try the following commands to generate DOTF data at fractional object point Y=.1 and X=.2:
-
-# In[ ]:
+Image(filename = PATH + "\OpTaliX\OpTaliX_spot.png", width=900, height=800)
 
 
-wl(f, ['FOB .1 .2'])
-wl(f, ['CAPFN'])         # generates the complex aperture function
-wl(f, ['DOTF'])          # generates the MTF
-wl(f, ['pltdotf'])       # plots the MTF 
+# Geometrical and Diffraction MTF generation and plotting is done with these commands for all defined fields: 
+
+# In[15]:
 
 
-# In[ ]:
+#wl(f, ['MTF FRE GEO'])   # generate and plot geometric MTF vs. frequency
+#wl(f, ['MTF FRE'])       # generate and plot diffraction MTF vs. frequency
 
 
-Image(filename = PATH + "\KDP-2_Cooke_triplet_mtf_unopt.png", width=900, height=800)
+# In[16]:
+
+
+Image(filename = PATH + "\OpTaliX\OpTaliX_mtf.png", width=900, height=800)
 
 
 # ## Optimization with predefined operands:
@@ -304,10 +285,7 @@ Image(filename = PATH + "\KDP-2_Cooke_triplet_mtf_unopt.png", width=900, height=
 # In[ ]:
 
 
-wl(f, ['U L'])                  # update lens
-wl(f, ['CHG  9'])               # change surface 9
-wl(f, ['PY'])                   # PY solve to this surface
-wl(f, ['EOS'])                  # return to CMD level
+
 
 
 # Next, set up the operands (targets) with the following commands:
@@ -315,10 +293,7 @@ wl(f, ['EOS'])                  # return to CMD level
 # In[ ]:
 
 
-wl(f, ['MERIT'])                # enter merit creation mode
-wl(f, ['FLCLTH 100 1 0 10'])    # paraxial focal length be targeted to 100 with a weight of 1 for surfaces 0 to 10 (the entire lens).
-wl(f, ['SA3 0 1'])              # 3rd order spherical aberration to 0.0 with a weight of 1
-wl(f, ['EOS'])                  # return to CMD level
+
 
 
 # Next, set up the variables with the following commands:
@@ -326,17 +301,13 @@ wl(f, ['EOS'])                  # return to CMD level
 # In[ ]:
 
 
-wl(f, ['variables'])            # enter variables creation mode
-wl(f, ['cv 8'])                 # define curvature and conic constant of surface 8 to be variable
-wl(f, ['cc 8'])  
-wl(f, ['eos'])                  # save these definitions and return to CMD level
+
 
 
 # In[ ]:
 
 
-wl(f, ['VB'])         # lists the current variables
-wl(f, ['OPRD'])       # This lists the current operands with their current and targeted values
+
 
 
 # This optimization problem can be solved with damped least squares (ITER) or directly (PFIND) since we have two variables and two operands which happen to be linearly independent. We will do a combination of the two techniques. Type:
@@ -344,11 +315,7 @@ wl(f, ['OPRD'])       # This lists the current operands with their current and t
 # In[ ]:
 
 
-wl(f, ['ITER']) 
-wl(f, ['PFIND']) 
-wl(f, ['ITER']) 
-wl(f, ['VB']) 
-wl(f, ['OPRD'])
+
 
 
 # After these optimization cycles, the FMT (Figure of Merit) will be much smaller than it was. Before we started, it was 0.13095. The new focal length and SA3 values will be very near their target values. Further cycles could drive the values closer to their targets. The new curvature and conic values can be seen by issuing another VB command or by issuing an RTG ALL or an RTG 8 command. The thickness of surface 9 has now changed to 0.474615 mm in order to maintain paraxial focus. There are other optimization methods described in the reference manual which you should try.
