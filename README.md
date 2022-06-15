@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+# Optical Design Docu
 
-You can use the [editor on GitHub](https://github.com/Jonas231/OpticalDesignDocu_o/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This book compares the syntax and features of various optical design programs (free and commercial software). The programs considered are [KDP-2](http://www.ecalculations.com/), its evolution [Koko](https://github.com/dinosauria123/Koko/), [OpTaliX](http://www.optenso.com/), [OSLO](https://lambdares.com/oslo/), [ZEMAX](https://www.zemax.com/), [CodeV](https://www.synopsys.com/optical-solutions/codev.html), and [SYNOPSYS](https://osdoptics.com/). These are the established and most mature software packages available worldwide. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+KDP-2 is considered because it is free, open source and very versatile. OpTaliX is the most cost-effective commercial program considering its many features. OSLO is even more powerful while it keeps a decent price policy and maybe more effective than ZEMAX or CodeV in some areas. ZEMAX and CodeV are the standards in the optical design community (and the most costly programs with the highest quantity of features, developers and users). SYNOPSYS is an advanced optical design program.
 
-### Markdown
+I feel there is an need to compares these programs with respect to capabilities and also to provide a reference which lightens working with some of these programs (where the documentation is not perfected, such as KDP-2) or where manuals are very long and you have to scroll through big tables (ZEMAX). Also some folks may want to work with several of these programs alternatively and not get confused by the slightly different command syntax.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The texts of the author are by no means intended to favor one of those programs over the others. There are also some incomplete python-based packages, such as [opticspy](https://github.com/Sterncat/opticspy), [Pyrate](https://github.com/mess42/pyrate), [ray-optics](https://github.com/mjhoptics/ray-optics), [rayopt](https://github.com/quartiq/rayopt), [Raypier](https://github.com/bryancole/raypier_optics), and many others. 
 
-```markdown
-Syntax highlighted code block
+Non-sequential raytracers such as [FRED](https://photonengr.com/fred-software/), [Lighttools](https://www.synopsys.com/optical-solutions/lighttools.html), [TracePro](https://lambdares.com/tracepro/),  [RAYJACK ONE](https://www.hembach-photonik.de/en/rayjack-one/) are not considered in this book. 
 
-# Header 1
-## Header 2
-### Header 3
+Another goal of this book is to collect links and information related to the practice of optical design.
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+Please check out the following pages.
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```{tableofcontents}
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Jonas231/OpticalDesignDocu_o/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+The source of this book is located here:
+[Source](https://github.com/Jonas231/OpticalDesignDocu_o)
